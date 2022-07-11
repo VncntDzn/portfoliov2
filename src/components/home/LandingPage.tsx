@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Divider, Typography } from "@mui/material";
 import Image from "next/image";
 
 import Pic from "../../assets/pic.jpg";
@@ -7,7 +7,6 @@ import Pic from "../../assets/pic.jpg";
 const LandingPage = () => {
     return (
         <Box
-            /*       border="3px solid red" */
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -22,10 +21,12 @@ const LandingPage = () => {
                 style={{ borderRadius: "50%" }}
             />
             <Box alignSelf="flex-start" marginY={2}>
-                <Typography variant="h6" borderBottom="2px solid red">
-                    Hello my name is,
-                </Typography>
+                <Typography variant="h6">Hello my name is,</Typography>
+                <Divider sx={{ width: "50%" }} />
                 <Typography variant="h4">Vincent</Typography>
+                <Button variant="contained" sx={{ backgroundColor: "#F87537" }}>
+                    Download CV
+                </Button>
             </Box>
         </Box>
     );
