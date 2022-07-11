@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
 import Head from "next/head";
 import React, { ReactNode } from "react";
-import { CSSProperties } from "react";
 
 type PageProps = {
     children: ReactNode;
-    props?: CSSProperties;
+    props?: [];
     title?: string;
 };
 

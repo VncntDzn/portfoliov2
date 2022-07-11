@@ -1,2 +1,3 @@
 import Navbar from "./nav";
-export { Navbar };
+import LandingPage from "./home/LandingPage";
+export { Navbar, LandingPage };

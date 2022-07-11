@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
+import { LandingPage, Navbar } from "../components";
 import PageContainer from "../layouts";
-import { Navbar } from "../components";
 const Home: NextPage = () => {
     return (
         <PageContainer title="Home">
             <Navbar />
+            <LandingPage />
         </PageContainer>
     );
 };
