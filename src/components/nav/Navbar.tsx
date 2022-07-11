@@ -1,8 +1,21 @@
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
 
 const Navbar = () => {
     return (
-        <div style={{ height: "5rem", border: "3px solid red" }}>Navbar</div>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1, border: "3px solid red" }}
+                    >
+                        Nav
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+        </Box>
     );
 };
 

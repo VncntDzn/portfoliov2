@@ -7,7 +7,7 @@ import Pic from "../../assets/pic.jpg";
 const LandingPage = () => {
     return (
         <Box
-            border="3px solid red"
+            /*       border="3px solid red" */
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -21,10 +21,10 @@ const LandingPage = () => {
                 style={{ borderRadius: "50%" }}
             />
             <Box alignSelf="flex-start">
-                <Typography sx={{ borderBottom: "3px solid red" }}>
-                    Hello, my name is
+                <Typography variant="h6" borderBottom="2px solid red">
+                    Hello my name is,
                 </Typography>
-                <Typography>Vincent</Typography>
+                <Typography variant="h4">Vincent</Typography>
             </Box>
         </Box>
     );
