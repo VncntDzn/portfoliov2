@@ -23,7 +23,7 @@ const LandingPage = () => {
             <Box alignSelf="flex-start" marginY={2}>
                 <Typography variant="h6">Hello my name is,</Typography>
                 <Divider sx={{ width: "50%" }} />
-                <Typography variant="h4">Vincent</Typography>
+                <Typography variant="h4">Vincent Dizon</Typography>
                 <Button variant="contained" sx={{ backgroundColor: "#F87537" }}>
                     Download CV
                 </Button>

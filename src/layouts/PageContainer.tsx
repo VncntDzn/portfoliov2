@@ -19,7 +19,9 @@ const PageContainer = ({ title = "", children, ...props }: PageProps) => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Box {...props} /* backgroundColor="#2C3333" */>{children}</Box>
+            <Box {...props} /* backgroundColor="#FEFBE7" zIndex={-1} */>
+                {children}
+            </Box>
         </Box>
     );
 };

@@ -12,10 +12,10 @@ const Home: NextPage = () => {
             </Box>
             <Box
                 position="fixed"
-                height={300}
-                width={300}
+                height={400}
+                width={400}
                 top={-100}
-                right={-70}
+                right={-150}
                 zIndex={-1}
             >
                 <Circle />

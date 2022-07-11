@@ -11,6 +11,9 @@ const MobileNavbar = () => {
             height="100%"
             zIndex={1}
             width="70%"
+            sx={{
+                backgroundColor: "white",
+            }}
         >
             {NAV.map(({ name }) => (
                 <Fragment key={name}>
