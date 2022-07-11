@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     return (
         <PageContainer title="Home">
             <Navbar />
-            <Box padding={2}>
+            <Box padding={3}>
                 <LandingPage />
             </Box>
             <Box
