@@ -12,6 +12,7 @@ const LandingPage = () => {
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
+            marginY={5}
         >
             <Image
                 src={Pic}
@@ -20,7 +21,7 @@ const LandingPage = () => {
                 width={200}
                 style={{ borderRadius: "50%" }}
             />
-            <Box alignSelf="flex-start">
+            <Box alignSelf="flex-start" marginY={2}>
                 <Typography variant="h6" borderBottom="2px solid red">
                     Hello my name is,
                 </Typography>

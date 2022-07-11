@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" color="transparent">
                 <Toolbar>
                     <Typography
                         variant="h6"
