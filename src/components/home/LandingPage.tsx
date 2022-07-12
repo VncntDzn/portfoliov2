@@ -12,10 +12,10 @@ const LandingPage = () => {
         console.log("working");
         controls.start({
             y: "-100vh",
-
             transition: { duration: 3 },
             boxShadow: " 0 4px 8px 0 rgba(0,0,0,0.2)",
-            backgroundColor: "rgba(255,255,255, 0.9)",
+            backgroundColor: "rgba(255,255,255)",
+            borderRadius: 20,
         });
     };
 
@@ -29,10 +29,8 @@ const LandingPage = () => {
             component={motion.div}
             animate={controls}
             initial={false}
-            exit={{
-                x: "50% ",
-            }}
             transition={{ ease: "easeOut", duration: 1, delay: 1 }}
+            padding={3}
         >
             <Image
                 src={Pic}
