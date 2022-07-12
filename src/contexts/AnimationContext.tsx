@@ -27,7 +27,7 @@ const initialState = {
     stop: false,
 };
 
-const authReducer = (state: State, action: Action) => {
+const animationReducer = (state: State, action: Action) => {
     switch (action.type) {
         case "START_ANIMATION":
             return {
@@ -40,8 +40,8 @@ const authReducer = (state: State, action: Action) => {
             throw new Error(`Unhandled action type`);
     }
 };
-const AuthProvider = ({ children }: AnimationProviderProps) => {
-    const [state, dispatch] = useReducer(authReducer, initialState);
+const AnimationProvider = ({ children }: AnimationProviderProps) => {
+    const [state, dispatch] = useReducer(animationReducer, initialState);
     return (
         <AnimationContext.Provider value={{ state, dispatch }}>
             {children}
@@ -53,10 +53,10 @@ const useAnimationContext = () => {
     const context = useContext(AnimationContext);
     if (context === undefined) {
         throw new Error(
-            "useAnimationContext must be used within a AuthProvider"
+            "useAnimationContext must be used within a AnimationProvider"
         );
     }
     return context;
 };
 
-export { AuthProvider, useAnimationContext };
+export { AnimationProvider, useAnimationContext };
