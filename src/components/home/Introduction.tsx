@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 const Introduction = () => {
     const controls = useAnimation();
 
-    const sequence = () => {
+    const handleAnimate = () => {
         return controls.start({
             y: "-150%",
         });
@@ -31,6 +31,7 @@ const Introduction = () => {
                 <Typography variant="h3" textAlign="center" color="white">
                     Hello World, I am Vincent Dizon
                 </Typography>
+                <Typography>Know More</Typography>
                 <Box
                     component={motion.div}
                     animate={{
@@ -42,7 +43,7 @@ const Introduction = () => {
                         bounce: 0.8,
                         duration: 1,
                     }}
-                    onClick={sequence}
+                    onClick={handleAnimate}
                 >
                     <ArrowDownwardIcon
                         fontSize="large"
