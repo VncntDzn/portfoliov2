@@ -8,7 +8,6 @@ type Dispatch = (action: Action) => void;
 type State = {
     error: string | undefined;
     status: string | undefined;
-    loading: boolean;
     start: boolean;
     stop: boolean;
 };
@@ -22,7 +21,6 @@ const AnimationContext = createContext<
 const initialState = {
     error: "",
     status: "",
-    loading: false,
     start: false,
     stop: false,
 };

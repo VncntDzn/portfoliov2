@@ -2,23 +2,26 @@ import { Box, Button, Divider, Typography } from "@mui/material";
 import Image from "next/image";
 
 import Pic from "../../assets/pic.jpg";
-
+import { useAnimationContext } from "contexts/AnimationContext";
 import { motion, useAnimation } from "framer-motion";
 
+import { useEffect } from "react";
 const LandingPage = () => {
+    const { state } = useAnimationContext();
     const controls = useAnimation();
-
-    const handleStartAnimation = () => {
-        console.log("working");
-        controls.start({
-            y: "-100vh",
-            transition: { duration: 3 },
-            boxShadow: " 0 4px 8px 0 rgba(0,0,0,0.2)",
-            backgroundColor: "rgba(255,255,255)",
-            borderRadius: 20,
-        });
-    };
-
+    useEffect(() => {
+        if (state.start) {
+            (function handleStartAnimation() {
+                controls.start({
+                    transition: { duration: 3 },
+                    boxShadow: " 0 4px 8px 0 rgba(0,0,0,0.2)",
+                    backgroundColor: "rgba(255,255,255)",
+                    borderRadius: 20,
+                    y: "-75vh",
+                });
+            })();
+        }
+    }, [state.start, controls]);
     return (
         <Box
             display="flex"
@@ -26,11 +29,12 @@ const LandingPage = () => {
             alignItems="center"
             flexDirection="column"
             marginY={5}
+            padding={3}
             component={motion.div}
             animate={controls}
             initial={false}
-            transition={{ ease: "easeOut", duration: 1, delay: 1 }}
-            padding={3}
+            transition={{ ease: "easeOut", duration: 1 }}
+            marginTop={"80vh"}
         >
             <Image
                 src={Pic}
@@ -40,9 +44,7 @@ const LandingPage = () => {
                 style={{ borderRadius: "50%", zIndex: -1 }}
             />
             <Box alignSelf="flex-start" marginY={2}>
-                <Typography variant="h6" onClick={handleStartAnimation}>
-                    Hello my name is,
-                </Typography>
+                <Typography variant="h6">Hello my name is,</Typography>
                 <Divider sx={{ width: "50%" }} />
                 <Typography variant="h4">Vincent Dizon</Typography>
                 <Typography>Web Developer</Typography>

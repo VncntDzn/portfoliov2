@@ -1,5 +1,8 @@
 import { Box } from "@mui/material";
+import AboutMe from "components/home/AboutMe";
 import Introduction from "components/home/Introduction";
+import VariantOne from "components/home/VariantOne";
+
 import type { NextPage } from "next";
 import { LandingPage, Navbar } from "../components";
 import PageContainer from "../layouts";
@@ -9,10 +12,14 @@ const Home: NextPage = () => {
         <>
             <PageContainer title="Home">
                 <Navbar />
+                <VariantOne />
+              {/*   <AboutMe /> */}
+                {/* 
                 <Introduction />
 
                 <Box paddingX={3}>
                     <LandingPage />
+                    <AboutMe />
                 </Box>
                 <Box
                     position="fixed"
@@ -23,7 +30,7 @@ const Home: NextPage = () => {
                     zIndex={-10}
                 >
                     <Circle />
-                </Box>
+                </Box> */}
             </PageContainer>
         </>
     );

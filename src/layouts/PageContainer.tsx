@@ -19,7 +19,20 @@ const PageContainer = ({ title = "", children, ...props }: PageProps) => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Box {...props} /* backgroundColor="#FEFBE7" zIndex={-1} */>
+            <Box
+                {...props}
+                backgroundColor="#F4F4F4"
+               /*  style={{
+                    minHeight: "100%",
+                    background: ` linear-gradient(#7F8487 0 0) calc(1*30%/4),
+                      linear-gradient(#7F8487 0 0) calc(2*120%/4),
+                      linear-gradient(#7F8487 0 0) calc(3*110%/4),
+                      linear-gradient(#7F8487 0 0) calc(4*95%/4)`,
+                    backgroundSize: ".5px 100%"  ,
+                    backgroundRepeat: "no-repeat",
+                    zIndex: 1
+                }} */
+            >
                 {children}
             </Box>
         </Box>
