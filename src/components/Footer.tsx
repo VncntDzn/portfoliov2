@@ -91,7 +91,7 @@ const Footer = () => {
                             sx={{
                                 color: "white",
                                 ":hover": {
-                                    backgroundColor: "#8c8c8c",
+                                    backgroundColor: "#090909",
                                 },
                             }}
                         >
