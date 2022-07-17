@@ -43,8 +43,8 @@ const Footer = () => {
             sx={{
                 backgroundColor: "#1d1d1d",
 
-                paddingX: { xs: 5, lg: 20 },
-                paddingY: 5,
+                paddingX: { xs: 5, lg: 25 },
+                paddingY: { xs: 5, lg: 10 },
             }}
         >
             <Grid
