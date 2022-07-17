@@ -24,7 +24,7 @@ const ScrollArrow = () => {
             position="absolute"
             sx={{
                 bottom: { xs: 10 },
-                right: { xs: "40%", lg: "45%" },
+                right: { xs: "40%", lg: "45%", xl: "48%" },
                 display: "flex",
                 flexDirection: "column",
             }}

@@ -15,7 +15,7 @@ const Counter = () => {
                 zIndex: -1,
                 position: "absolute",
                 top: { xs: 30 },
-                right: { xs: 70 },
+                right: { xs: 70, lg: 120 },
             }}
         >
             <Typography
