@@ -35,7 +35,7 @@ const SocialLinks = () => {
                 opacity: 1,
             }}
             sx={{
-                display: { xs: "none", lg: "flex" },
+                display: { xs: "none", md: "flex" },
                 position: "absolute",
                 right: 20,
                 bottom: 50,
@@ -47,8 +47,9 @@ const SocialLinks = () => {
                 <Fragment key={name}>
                     <Typography
                         component={motion.p}
+                        color="#8c8c8c"
                         whileHover={{
-                            color: "#8c8c8c",
+                            color: "black",
                             cursor: "pointer",
                             letterSpacing: "2px",
                             textDecoration: "underline",
@@ -56,7 +57,9 @@ const SocialLinks = () => {
                     >
                         {name}
                     </Typography>
-                    {name !== "Instagram" && <Typography>/</Typography>}
+                    {name !== "Instagram" && (
+                        <Typography color="#8c8c8c">/</Typography>
+                    )}
                 </Fragment>
             ))}
         </Box>
