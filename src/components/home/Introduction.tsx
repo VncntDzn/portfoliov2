@@ -1,14 +1,13 @@
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Box, Typography } from "@mui/material";
-import { useAnimationContext } from "contexts/AnimationContext";
 import { motion, useAnimation } from "framer-motion";
 
 const Introduction = () => {
-    const { dispatch } = useAnimationContext();
+    /*  const { dispatch } = useAnimationContext(); */
     const controls = useAnimation();
 
     const handleAnimate = () => {
-        dispatch({ type: "START_ANIMATION" });
+        /*  dispatch({ type: "START_ANIMATION" }); */
         controls.start({
             y: "-150%",
         });
