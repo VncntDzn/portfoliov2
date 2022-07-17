@@ -51,6 +51,7 @@ const SocialLinks = () => {
                             color: "#8c8c8c",
                             cursor: "pointer",
                             letterSpacing: "2px",
+                            textDecoration: "underline",
                         }}
                     >
                         {name}

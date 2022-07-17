@@ -21,6 +21,10 @@ const Counter = () => {
             }}
         >
             <Typography
+                component={motion.p}
+                whileHover={{
+                    textShadow: "-20px 40px 1px rgba(177, 177, 177,0.25)",
+                }}
                 sx={{
                     transform: isInView ? "none" : "translateX(200px)",
                     opacity: isInView ? 1 : 0,
