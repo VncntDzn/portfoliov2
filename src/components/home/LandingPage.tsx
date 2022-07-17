@@ -1,61 +1,114 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
-import Image from "next/image";
+import { Box, Divider, Typography } from "@mui/material";
 
-import Pic from "../../assets/pic.jpg";
-import { useAnimationContext } from "contexts/AnimationContext";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import Circle from "./landing-page/Circle";
+import ScrollArrow from "./landing-page/ScrollArrow";
+import SeeWorks from "./landing-page/SeeWorks";
+import SocialLinks from "./landing-page/SocialLinks";
 
-import { useEffect } from "react";
 const LandingPage = () => {
-    const { state } = useAnimationContext();
-    const controls = useAnimation();
-    useEffect(() => {
-        if (state.start) {
-            (function handleStartAnimation() {
-                controls.start({
-                    transition: { duration: 3 },
-                    boxShadow: " 0 4px 8px 0 rgba(0,0,0,0.2)",
-                    backgroundColor: "rgba(255,255,255)",
-                    borderRadius: 20,
-                    y: "-75vh",
-                });
-            })();
-        }
-    }, [state.start, controls]);
+    const EASE_OUT_TRANSITION = { ease: "easeOut", duration: 1.5 };
+    const X_ANIMATE = {
+        TEXT_ANIMATE: {
+            x: "5%",
+        },
+    };
+    const TEXT_TITLE = {
+        ...X_ANIMATE,
+        TEXT_INITIAL: { x: "-110%" },
+    };
+    const TEXT_SUBTITLE = {
+        ...X_ANIMATE,
+        TEXT_INITIAL: { x: "110%" },
+    };
     return (
         <Box
             display="flex"
+            flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            flexDirection="column"
-            marginY={5}
-            padding={3}
-            component={motion.div}
-            animate={controls}
-            initial={false}
-            transition={{ ease: "easeOut", duration: 1 }}
-            marginTop={"80vh"}
+            position="relative"
+            zIndex={1}
+            sx={{
+                backgroundColor: "#F4F4F4",
+                height: { xs: "100vh", sm: "40vh", lg: "100vh" },
+            }}
         >
-            <Image
-                src={Pic}
-                alt="Vincent"
-                height={200}
-                width={200}
-                style={{ borderRadius: "50%", zIndex: -1 }}
-            />
-            <Box alignSelf="flex-start" marginY={2}>
-                <Typography variant="h6">Hello my name is,</Typography>
-                <Divider sx={{ width: "50%" }} />
-                <Typography variant="h4">Vincent Dizon</Typography>
-                <Typography>Web Developer</Typography>
-                <Button
-                    variant="contained"
-                    sx={{ backgroundColor: "#F87537", marginY: 2 }}
+            <Box
+                display="flex"
+                alignItems="center"
+                width="100%"
+                component={motion.div}
+                variants={TEXT_TITLE}
+                transition={EASE_OUT_TRANSITION}
+                initial="TEXT_INITIAL"
+                animate="TEXT_ANIMATE"
+                whileHover={{
+                    x: "-10%",
+                }}
+            >
+                <Typography
+                    variant="h1"
+                    fontWeight={700}
+                    sx={{
+                        fontSize: { xs: 30, sm: 50, md: 80 },
+                        marginX: 1,
+                    }}
                 >
-                    Download CV
-                </Button>
+                    Vincent Dizon
+                </Typography>
+                <Divider
+                    sx={{
+                        width: { xs: "20%", lg: "40%" },
+                    }}
+                />
             </Box>
+
+            <Box
+                display="flex"
+                flexDirection="column"
+                alignItems={"flex-start"}
+                width="100%"
+                component={motion.div}
+                variants={TEXT_SUBTITLE}
+                transition={EASE_OUT_TRANSITION}
+                initial="TEXT_INITIAL"
+                animate="TEXT_ANIMATE"
+            >
+                <Box
+                    display="flex"
+                    width="100%"
+                    alignItems="center"
+                    component={motion.div}
+                    transition={EASE_OUT_TRANSITION}
+                    whileHover={{
+                        x: "10%",
+                    }}
+                >
+                    <Divider
+                        sx={{
+                            width: { xs: "20%", lg: "10%" },
+                        }}
+                    />
+                    <Typography
+                        marginLeft={2}
+                        fontWeight={700}
+                        color="#8c8c8c"
+                        sx={{
+                            fontSize: { xs: 20, lg: 40 },
+                        }}
+                    >
+                        front-end developer
+                    </Typography>
+                </Box>
+
+                <SeeWorks />
+            </Box>
+            <SocialLinks />
+            <ScrollArrow />
+            <Circle />
         </Box>
     );
 };
+
 export default LandingPage;

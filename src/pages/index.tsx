@@ -1,19 +1,20 @@
 import { Box } from "@mui/material";
+import { LandingPage } from "components";
 import AboutMe from "components/home/AboutMe";
 import Introduction from "components/home/Introduction";
-import VariantOne from "components/home/VariantOne";
 
 import type { NextPage } from "next";
-import { LandingPage, Navbar } from "../components";
+
 import PageContainer from "../layouts";
-import Circle from "../svg/circle.svg";
 const Home: NextPage = () => {
     return (
         <>
             <PageContainer title="Home">
-                <Navbar />
-                <VariantOne />
-              {/*   <AboutMe /> */}
+                {/*  <Navbar /> */}
+                <Box sx={{ paddingX: { xs: 5, lg: 20 } }}>
+                    <LandingPage />
+                    {/*   <AboutMe /> */}
+                </Box>
                 {/* 
                 <Introduction />
 
