@@ -25,6 +25,9 @@ const SeeWorks = () => {
                 bounce: 0.5,
                 repeatType: "mirror",
             }}
+            sx={{
+                marginTop: { xs: 2, md: 3 },
+            }}
         >
             <Box
                 display="flex"
@@ -39,9 +42,11 @@ const SeeWorks = () => {
                 }}
             >
                 <Typography
-                    marginLeft={3}
                     fontWeight={700}
-                    sx={{ fontSize: { xs: 13, md: 15 } }}
+                    sx={{
+                        fontSize: { xs: 13, md: 15 },
+                        marginLeft: { xs: 3, lg: 5 },
+                    }}
                 >
                     SEE MY WORKS
                 </Typography>
@@ -53,7 +58,7 @@ const SeeWorks = () => {
                 sx={{
                     backgroundColor: "#e1e1e1",
                     position: "absolute",
-                    bottom: { xs: -20, lg: -50 },
+                    bottom: { xs: -20, lg: -35 },
                     left: { xs: 15 },
                     zIndex: -1,
                     height: SIZE,
