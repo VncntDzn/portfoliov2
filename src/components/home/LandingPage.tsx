@@ -1,4 +1,5 @@
 import { Box, Divider, Typography } from "@mui/material";
+import Counter from "components/Counter";
 
 import { motion } from "framer-motion";
 import Circle from "./landing-page/Circle";
@@ -107,6 +108,7 @@ const LandingPage = () => {
             <SocialLinks />
             <ScrollArrow />
             <Circle />
+            <Counter />
         </Box>
     );
 };

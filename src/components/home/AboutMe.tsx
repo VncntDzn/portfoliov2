@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-import { motion, useAnimation } from "framer-motion";
 const AboutMe = () => {
     return (
         <Box
@@ -8,7 +7,6 @@ const AboutMe = () => {
             height="100vh   "
             sx={{
                 backgroundColor: "white",
-             
             }}
             /*  component={motion.div}
             whileInView={{ y: "-75vh" }}
@@ -31,10 +29,12 @@ const AboutMe = () => {
 
                     position: "absolute",
                     bottom: 10,
-                    zIndex:1
+                    zIndex: 1,
                 }}
             />{" "}
-            <Typography variant="h2" sx={{zIndex:10}}>About Me</Typography>
+            <Typography variant="h2" sx={{ zIndex: 10 }}>
+                About Me
+            </Typography>
         </Box>
     );
 };
