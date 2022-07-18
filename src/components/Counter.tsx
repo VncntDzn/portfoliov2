@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-const Counter = () => {
+const Counter = ({ count }: { count: string | number }) => {
     const ref = useRef(null);
     const isInView = useInView(ref);
     return (
@@ -12,10 +12,10 @@ const Counter = () => {
                 opacity: 1,
             }}
             sx={{
-                zIndex: -1,
+                zIndex: 1,
                 position: "absolute",
                 top: { xs: 30 },
-                right: { xs: 70, lg: 120 },
+                right: { xs: 70, lg: "20%" },
             }}
         >
             <Typography
@@ -25,7 +25,7 @@ const Counter = () => {
                 }}
                 sx={{
                     opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 3s",
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 2s",
                     fontSize: { xs: 40, lg: 150 },
                     textShadow: {
                         xs: "-5px 10px 1px rgba(177, 177, 177,0.25)",
@@ -35,7 +35,7 @@ const Counter = () => {
                 }}
                 color="#8c8c8c"
             >
-                01
+                0{count}
             </Typography>
         </Box>
     );

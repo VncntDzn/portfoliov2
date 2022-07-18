@@ -33,6 +33,8 @@ const LandingPage = () => {
             sx={{
                 backgroundColor: "#F4F4F4",
                 height: { xs: "100vh", sm: "40vh", lg: "100vh" },
+                paddingY: { xs: 5, lg: 10 },
+                paddingX: { xs: 5, lg: 20, xl: 50 },
             }}
         >
             <Box
@@ -108,7 +110,7 @@ const LandingPage = () => {
             <SocialLinks />
             <ScrollArrow />
             <Circle />
-            <Counter />
+            <Counter count={1} />
         </Box>
     );
 };

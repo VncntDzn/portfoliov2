@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import { LandingPage } from "components";
 import Footer from "components/Footer";
 import Projects from "components/home/Projects";
@@ -9,9 +8,7 @@ import PageContainer from "../layouts";
 const Home: NextPage = () => {
     return (
         <PageContainer title="Home">
-            <Box sx={{ paddingX: { xs: 5, lg: 20, xl: 40 } }}>
-                <LandingPage />
-            </Box>
+            <LandingPage />
             {/*  <AboutMe /> */}
             <Projects />
             <Footer />
