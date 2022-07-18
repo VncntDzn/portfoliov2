@@ -2,6 +2,7 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Counter from "components/Counter";
 
 import { motion, useAnimation } from "framer-motion";
+import FeaturedProject from "./projects/FeaturedProject";
 const Projects = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up("xl"));
@@ -9,7 +10,7 @@ const Projects = () => {
     const textAnimation = useAnimation();
     const handleStartProjectShowcase = async () => {
         controls.start({
-            y: "-200%",
+            y: "-300%",
             x: matches ? "-21rem" : "-13rem",
             transition: { duration: 2 },
         });
@@ -26,7 +27,7 @@ const Projects = () => {
                 background: "white",
                 paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 40 },
-                height: { lg: "105vh", xl: "115vh" },
+                height: { lg: "100vh" },
             }}
             display="flex"
             flexDirection="column"
@@ -46,6 +47,7 @@ const Projects = () => {
                     Take a look on my projects.
                 </Typography>
             </Box>
+            <FeaturedProject />
             <Counter count={2} />
         </Box>
     );
