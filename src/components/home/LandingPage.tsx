@@ -33,7 +33,7 @@ const LandingPage = () => {
             sx={{
                 backgroundColor: "#F4F4F4",
                 height: { xs: "100vh", sm: "40vh", lg: "100vh" },
-                paddingX: { xs: 5, lg: 20, xl: 50 },
+                paddingX: { xs: 5, lg: 20, xl: 40 },
             }}
         >
             <Divider

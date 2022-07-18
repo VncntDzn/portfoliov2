@@ -43,7 +43,7 @@ const Footer = () => {
             sx={{
                 backgroundColor: "#1d1d1d",
 
-                paddingX: { xs: 5, lg: 25, xl: 50 },
+                paddingX: { xs: 5, lg: 25, xl: 55 },
                 paddingY: { xs: 5, lg: 10 },
             }}
         >

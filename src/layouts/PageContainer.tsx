@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Head from "next/head";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 type PageProps = {
     children: ReactNode;
