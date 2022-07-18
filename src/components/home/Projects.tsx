@@ -15,7 +15,8 @@ const Projects = () => {
         });
         return await textAnimation.start({
             x: "-28%",
-            transition: { duration: 2 },
+            transition: { duration: 2, delay: 2 },
+
             textDecoration: "underline",
         });
     };
@@ -25,8 +26,7 @@ const Projects = () => {
                 background: "white",
                 paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 40 },
-                height: "105vh",
-                border: { lg: "3px solid red", xl: "3px solid blue" },
+                height: { lg: "105vh", xl: "115vh" },
             }}
             display="flex"
             flexDirection="column"
@@ -36,19 +36,14 @@ const Projects = () => {
             zIndex={1}
         >
             <Box component={motion.div} animate={controls}>
-                <Typography
-                    variant="h2"
-                    onClick={() => alert(window.innerWidth)}
-                >
-                    Featured Projects
-                </Typography>
+                <Typography variant="h2">Featured Projects</Typography>
                 <Typography
                     component={motion.p}
                     animate={textAnimation}
                     onClick={handleStartProjectShowcase}
                     sx={{ cursor: "pointer", textAlign: "center" }}
                 >
-                    Take a look on our projects.
+                    Take a look on my projects.
                 </Typography>
             </Box>
             <Counter count={2} />
