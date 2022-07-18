@@ -8,15 +8,23 @@ const Projects = () => {
     const matches = useMediaQuery(theme.breakpoints.up("xl"));
     const controls = useAnimation();
     const textAnimation = useAnimation();
+    const controls2 = useAnimation();
     const handleStartProjectShowcase = async () => {
         controls.start({
-            y: "-300%",
-            x: matches ? "-21rem" : "-13rem",
+            y: "-50%",
+            x: matches ? "-21rem" : "-7rem",
             transition: { duration: 2 },
         });
-        return await textAnimation.start({
+        await textAnimation.start({
             x: "-28%",
             transition: { duration: 2, delay: 2 },
+
+            textDecoration: "underline",
+        });
+
+        return await controls2.start({
+            x: "-28%",
+            transition: { duration: 2,  },
 
             textDecoration: "underline",
         });
@@ -47,7 +55,9 @@ const Projects = () => {
                     Take a look on my projects.
                 </Typography>
             </Box>
-            <FeaturedProject />
+            <Box component={motion.div} animate={controls2}>
+                <FeaturedProject />
+            </Box>
             <Counter count={2} />
         </Box>
     );

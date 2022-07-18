@@ -32,8 +32,8 @@ const LandingPage = () => {
             zIndex={1}
             sx={{
                 backgroundColor: "#F4F4F4",
-                height: { xs: "100vh", sm: "40vh", lg: "100vh" },
-                paddingX: { xs: 5, lg: 20, xl: 40 },
+                height: { xs: "100vh", sm: "40vh", md: "100vh" },
+                paddingX: { xs: 5, md: 20, lg: 40 },
             }}
         >
             <Divider
@@ -41,7 +41,7 @@ const LandingPage = () => {
                 flexItem
                 sx={{
                     display: { xs: "none", md: "flex" },
-                    height: { xs: "none", md: "80%" },
+                    height: { xs: "none", md: "70%", lg: "80%" },
                     position: "absolute",
                     left: "15%",
                 }}
@@ -65,7 +65,7 @@ const LandingPage = () => {
                     variant="h1"
                     fontWeight={700}
                     sx={{
-                        fontSize: { xs: 30, sm: 50, md: 80 },
+                        fontSize: { xs: 30, sm: 50, md: 60, lg: 70 },
                         marginX: 1,
                     }}
                 >
@@ -73,7 +73,7 @@ const LandingPage = () => {
                 </Typography>
                 <Divider
                     sx={{
-                        width: { xs: "20%", lg: "40%" },
+                        width: { xs: "20%", md: "30%", lg: "40%" },
                     }}
                 />
             </Box>
@@ -102,7 +102,7 @@ const LandingPage = () => {
                 >
                     <Divider
                         sx={{
-                            width: { xs: "20%", lg: "10%" },
+                            width: { xs: "20%", md: "15%" },
                         }}
                     />
                     <Typography
@@ -110,7 +110,7 @@ const LandingPage = () => {
                         fontWeight={700}
                         color="#8c8c8c"
                         sx={{
-                            fontSize: { xs: 20, lg: 40 },
+                            fontSize: { xs: 20, md: 40 },
                         }}
                     >
                         front-end developer
@@ -129,7 +129,7 @@ const LandingPage = () => {
                     display: { xs: "none", md: "block" },
                     position: "absolute",
                     top: 10,
-                    bottom: 97,
+                    bottom: 80,
                     left: "15%",
                     width: "70%",
                 }}

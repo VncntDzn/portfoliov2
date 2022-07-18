@@ -43,7 +43,7 @@ const Footer = () => {
             sx={{
                 backgroundColor: "#1d1d1d",
 
-                paddingX: { xs: 5, lg: 25, xl: 55 },
+                paddingX: { xs: 5, lg: 35, xl: 55 },
                 paddingY: { xs: 5, lg: 10 },
             }}
         >
@@ -59,6 +59,7 @@ const Footer = () => {
                     flexDirection="column"
                     justifyContent="flex-start"
                     lg={3}
+                    sm={3}
                 >
                     <Typography color="white" variant="h6">
                         Vincent Dizon
@@ -71,6 +72,7 @@ const Footer = () => {
                     justifyContent="space-evenly"
                     direction="row"
                     lg={6}
+                    sm={4}
                 >
                     {NAV_LINKS.map(({ name }) => (
                         <Typography textAlign="center" key={name} color="white">
@@ -84,6 +86,7 @@ const Footer = () => {
                     justifyContent="space-evenly"
                     direction="row"
                     lg={3}
+                    sm={3}
                 >
                     {SOCIAL_LINKS.map(({ name, icon }) => (
                         <IconButton
