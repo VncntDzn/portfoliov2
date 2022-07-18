@@ -1,11 +1,8 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import { Box, Typography } from "@mui/material";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-import { motion, useAnimation } from "framer-motion";
 const FeaturedProject = () => {
-  const controls = useAnimation();
-   
     const LINKS = [
         {
             name: "LinkedIn",
