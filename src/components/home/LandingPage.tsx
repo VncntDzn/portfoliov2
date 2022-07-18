@@ -33,10 +33,20 @@ const LandingPage = () => {
             sx={{
                 backgroundColor: "#F4F4F4",
                 height: { xs: "100vh", sm: "40vh", lg: "100vh" },
-                paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 50 },
             }}
         >
+            <Divider
+                orientation="vertical"
+                flexItem
+                sx={{
+                    display: { xs: "none", md: "flex" },
+                    height: { xs: "none", md: "80%" },
+                    position: "absolute",
+                    left: "15%",
+                }}
+            />
+
             <Box
                 display="flex"
                 alignItems="center"
@@ -111,6 +121,17 @@ const LandingPage = () => {
             <ScrollArrow />
             <Circle />
             <Counter count={1} />
+            <Divider
+                flexItem
+                sx={{
+                    display: { xs: "none", md: "block" },
+                    position: "absolute",
+                    top: 10,
+                    bottom: 97,
+                    left: "15%",
+                    width: "70%",
+                }}
+            />
         </Box>
     );
 };
