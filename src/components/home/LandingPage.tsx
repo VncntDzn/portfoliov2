@@ -59,6 +59,7 @@ const LandingPage = () => {
                 whileHover={{
                     x: "-10%",
                 }}
+                zIndex={1}
             >
                 <Typography
                     variant="h1"
@@ -87,6 +88,7 @@ const LandingPage = () => {
                 transition={EASE_OUT_TRANSITION}
                 initial="TEXT_INITIAL"
                 animate="TEXT_ANIMATE"
+                zIndex={1}
             >
                 <Box
                     display="flex"
