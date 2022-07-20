@@ -14,7 +14,7 @@ const Counter = ({ count }: { count: string | number }) => {
             sx={{
                 zIndex: 1,
                 position: "absolute",
-                top: { xs: 50 },
+                top: { xs: 50, lg: 30 },
                 right: { xs: 70, sm: '15%', lg: "20%" },
             }}
         >

@@ -7,21 +7,22 @@ import ScrollArrow from "./landing-page/ScrollArrow";
 import SeeWorks from "./landing-page/SeeWorks";
 import SocialLinks from "./landing-page/SocialLinks";
 
+const EASE_OUT_TRANSITION = { ease: "easeOut", duration: 1.5 };
+const X_ANIMATE = {
+    TEXT_ANIMATE: {
+        x: "5%",
+    },
+};
+const TEXT_TITLE = {
+    ...X_ANIMATE,
+    TEXT_INITIAL: { x: "-110%" },
+};
+const TEXT_SUBTITLE = {
+    ...X_ANIMATE,
+    TEXT_INITIAL: { x: "110%" },
+};
+
 const LandingPage = () => {
-    const EASE_OUT_TRANSITION = { ease: "easeOut", duration: 1.5 };
-    const X_ANIMATE = {
-        TEXT_ANIMATE: {
-            x: "5%",
-        },
-    };
-    const TEXT_TITLE = {
-        ...X_ANIMATE,
-        TEXT_INITIAL: { x: "-110%" },
-    };
-    const TEXT_SUBTITLE = {
-        ...X_ANIMATE,
-        TEXT_INITIAL: { x: "110%" },
-    };
     return (
         <Box
             display="flex"
@@ -41,7 +42,7 @@ const LandingPage = () => {
                 flexItem
                 sx={{
                     display: { xs: "none", md: "flex" },
-                    height: { xs: "none", md: "70%", lg: "80%" },
+                    height: { xs: "none", md: "70%", lg: "80%", xl: "83%" },
                     position: "absolute",
                     left: "15%",
                 }}
@@ -65,7 +66,7 @@ const LandingPage = () => {
                     variant="h1"
                     fontWeight={700}
                     sx={{
-                        fontSize: { xs: 30, sm: 50, md: 60, lg: 70 },
+                        fontSize: { xs: 30, sm: 50, md: 60, lg: 70, xl: 80 },
                         marginX: 1,
                     }}
                 >
@@ -73,7 +74,7 @@ const LandingPage = () => {
                 </Typography>
                 <Divider
                     sx={{
-                        width: { xs: "20%", md: "30%", lg: "40%" },
+                        width: { xs: "20%", md: "30%", lg: "40%", xl: "43%" },
                     }}
                 />
             </Box>

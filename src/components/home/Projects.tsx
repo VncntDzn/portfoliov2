@@ -1,19 +1,28 @@
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+    Box,
+    Card,
+    Grid,
+    Typography,
+    useMediaQuery,
+    useTheme,
+} from "@mui/material";
 import Counter from "components/Counter";
 
 import { motion, useAnimation } from "framer-motion";
+import { useState } from "react";
 import FeaturedProject from "./projects/FeaturedProject";
 const Projects = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up("xl"));
     const controls = useAnimation();
     const textAnimation = useAnimation();
-    const controls2 = useAnimation();
+    const [showProjects, setShowProjects] = useState(false);
     const handleStartProjectShowcase = async () => {
         controls.start({
-            y: "-50%",
-            x: matches ? "-21rem" : "-7rem",
+            y: "-10%",
+            x: matches ? "-21rem" : "-15rem",
             transition: { duration: 2 },
+            display: "block",
         });
         await textAnimation.start({
             x: "-28%",
@@ -21,30 +30,25 @@ const Projects = () => {
 
             textDecoration: "underline",
         });
-
-        return await controls2.start({
-            x: "-28%",
-            transition: { duration: 2,  },
-
-            textDecoration: "underline",
-        });
+        return setShowProjects(!showProjects);
     };
     return (
         <Box
+        zIndex={1}
             sx={{
                 background: "white",
                 paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 40 },
                 height: { lg: "100vh" },
+                border: "3px solid green"
             }}
             display="flex"
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
             position="relative"
-            zIndex={1}
         >
-            <Box component={motion.div} animate={controls}>
+            <Box component={motion.div} animate={controls} zIndex={1} sx={{border:"3px solid red"}}>
                 <Typography variant="h2">Featured Projects</Typography>
                 <Typography
                     component={motion.p}
@@ -55,9 +59,8 @@ const Projects = () => {
                     Take a look on my projects.
                 </Typography>
             </Box>
-            <Box component={motion.div} animate={controls2}>
-                <FeaturedProject />
-            </Box>
+
+            <FeaturedProject show={showProjects} />
             <Counter count={2} />
         </Box>
     );
