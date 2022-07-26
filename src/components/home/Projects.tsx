@@ -10,22 +10,27 @@ import Counter from "components/Counter";
 
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
+import FeaturedCarousel from "./projects/FeaturedCarousel";
 import FeaturedProject from "./projects/FeaturedProject";
+import Creativ from "assets/projects/creativ.jpeg";
+import Description from "./projects/Description";
 const Projects = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up("xl"));
+    const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
     const controls = useAnimation();
     const textAnimation = useAnimation();
     const [showProjects, setShowProjects] = useState(false);
+
     const handleStartProjectShowcase = async () => {
         controls.start({
-            y: "-10%",
-            x: matches ? "-21rem" : "-15rem",
+            y: "-50%",
+            x: matches ? "-20rem" : "-15rem",
             transition: { duration: 2 },
             display: "block",
         });
         await textAnimation.start({
-            x: "-28%",
+            x: "-13rem",
             transition: { duration: 2, delay: 2 },
 
             textDecoration: "underline",
@@ -34,13 +39,12 @@ const Projects = () => {
     };
     return (
         <Box
-        zIndex={1}
+            zIndex={1}
             sx={{
                 background: "white",
                 paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 40 },
-                height: { lg: "100vh" },
-                border: "3px solid green"
+                height: { lg: !showProjects ? "100vh" : "120vh" },
             }}
             display="flex"
             flexDirection="column"
@@ -48,8 +52,15 @@ const Projects = () => {
             alignItems="center"
             position="relative"
         >
-            <Box component={motion.div} animate={controls} zIndex={1} sx={{border:"3px solid red"}}>
-                <Typography variant="h2">Featured Projects</Typography>
+            <Box component={motion.div} animate={controls} zIndex={1}>
+                <Typography
+                    variant="h2"
+                    sx={{
+                        fontSize: { xs: 30, lg: 80 },
+                    }}
+                >
+                    Featured Projects
+                </Typography>
                 <Typography
                     component={motion.p}
                     animate={textAnimation}
@@ -60,7 +71,12 @@ const Projects = () => {
                 </Typography>
             </Box>
 
-            <FeaturedProject show={showProjects} />
+            {smMatch ? (
+                <FeaturedCarousel />
+            ) : (
+                <FeaturedProject show={showProjects} />
+            )}
+
             <Counter count={2} />
         </Box>
     );

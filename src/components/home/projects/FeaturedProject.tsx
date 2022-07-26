@@ -3,21 +3,14 @@ import PropTypes from "prop-types";
 import { Box, Grid, Typography } from "@mui/material";
 import Description from "./Description";
 import { useAnimation, motion } from "framer-motion";
+import Creativ from "assets/projects/creativ.jpeg";
 
 const FeaturedProject = ({ show }) => {
     const controls2 = useAnimation();
 
     const LINKS = [
         {
-            bgColor: "green",
-            name: "LinkedIn",
-            link: "",
-            height: 500,
-
-            margin: "0 0 0 0",
-        },
-        {
-            bgColor: "red",
+            image: Creativ,
             name: "Github",
             link: "",
             height: 300,
@@ -25,22 +18,32 @@ const FeaturedProject = ({ show }) => {
         },
         {
             bgColor: "yellow",
+            image: Creativ,
             name: "Instagram",
             link: "",
             height: 300,
 
-            margin: "-2.5rem 0 0 0",
+            margin: "-6rem 0 0 0",
         },
         {
             bgColor: "blue",
+            image: Creativ,
             name: "Facebook",
             link: "",
-            height: 500,
-            margin: `-15rem 0 0 0`,
+            height: 400,
+            margin: `-19rem 0 0 0`,
+        },
+        {
+            bgColor: "blue",
+            image: Creativ,
+            name: "Facebook",
+            link: "",
+            height: 400,
+            margin: `-19rem 0 0 0`,
         },
     ];
 
-    const EASE_OUT_TRANSITION = { ease: "easeIn", duration: 1.5 };
+    const EASE_OUT_TRANSITION = { ease: "easeIn", duration: 1 };
     useEffect(() => {
         if (show) {
             controls2.start({
@@ -51,43 +54,45 @@ const FeaturedProject = ({ show }) => {
         }
     }, [show, controls2]);
     return (
-        <Grid
-            component={motion.div}
-            initial={{
-                opacity: 0,
-                display: "none",
-            }}
-            transition={EASE_OUT_TRANSITION}
-            animate={controls2}
-            container
-            gap={2}
-            justifyContent="center"
-            alignItems="center" 
-            sx={{border:"3px solid red"}}
+        <Box
+            display="flex"
+            flexWrap="wrap"
+            flexDirection="row"
+            alignItems={"center"}
+            justifyContent="space-evenly"
         >
-            {LINKS.map(({ name, bgColor, height, margin }, i) => (
-                <Box
-                    component={motion.div}
-                    whileHover={{
-                        x: i % 2 === 0 ? "-20%" : "20%",
-                        scale: 1.1,
-                    }}
-                    transition={{ ease: "linear" }}
-                    position="relative"
-                    width={500}
-                    key={name}
-                    sx={{
-                        backgroundColor: bgColor,
-                        height,
-                        margin,
-                        zIndex: 1,
-                    }}
-                >
-                    <Typography textAlign="center">{name} </Typography>
-                    <Description />
-                </Box>
-            ))}
-        </Grid>
+            {show &&
+                LINKS.map(({ name, image }, i) => (
+                    <Box
+                        component={motion.div}
+                        whileHover={{
+                            scale: 1.5,
+                            zIndex: 2,
+                            borderRadius: "1rem",
+                            filter: "brightness(1)",
+                        }}
+                        transition={EASE_OUT_TRANSITION}
+                        position="relative"
+                        key={name}
+                        sx={{
+                            height: "40vh",
+                            width: "30vw",
+                            zIndex: 1,
+                            backgroundImage: `url("${image.src}")`,
+                            backgroundSize: "cover",
+                            objectFit: "contain",
+
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginY: 1,
+                            filter: "brightness(70%)",
+                        }}
+                    >
+                        <Description />
+                    </Box>
+                ))}
+        </Box>
     );
 };
 
