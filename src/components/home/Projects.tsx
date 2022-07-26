@@ -8,12 +8,15 @@ import {
 } from "@mui/material";
 import Counter from "components/Counter";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
 import FeaturedCarousel from "./projects/FeaturedCarousel";
 import FeaturedProject from "./projects/FeaturedProject";
 import Creativ from "assets/projects/creativ.jpeg";
 import Description from "./projects/Description";
+import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
 const Projects = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up("xl"));
@@ -71,11 +74,42 @@ const Projects = () => {
                 </Typography>
             </Box>
 
-            {smMatch ? (
+            <Carousel>
+                <Box
+                    position="relative"
+                    sx={{
+                       
+                        borderRadius: 3,
+
+                        height: { xs: "40vh", sm: "20vh", md: "50vh" },
+                        width: { xs: 300, sm: "95%", lg: "50vw" },
+                        boxShadow: `0 4px 8px 0 rgba(0,0,0,0.2)`,
+                        padding: 1,
+                        border: "3px solid red",
+                    }}
+                >
+                    <Image
+                        src={Creativ}
+                        quality={100}
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Hi"
+                    />
+                     <Typography className="legend">Legend 1</Typography>
+                </Box>
+                <div>
+                    <Typography className="legend">Legend 2</Typography>
+                </div>
+                <div>
+                    <Typography className="legend">Legend 3</Typography>
+                </div>
+            </Carousel>
+
+            {/*  {smMatch ? (
                 <FeaturedCarousel />
             ) : (
                 <FeaturedProject show={showProjects} />
-            )}
+            )} */}
 
             <Counter count={2} />
         </Box>

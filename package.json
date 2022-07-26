@@ -18,10 +18,12 @@
         "@mui/material": "^5.8.7",
         "framer-motion": "^6.4.3",
         "hamburger-react": "^2.5.0",
+        "i": "^0.3.7",
         "next": "12.2.2",
+        "npm": "^8.15.0",
+        "pure-react-carousel": "^1.28.1",
         "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-responsive-carousel": "^3.2.23"
+        "react-dom": "18.2.0"
     },
     "devDependencies": {
         "@svgr/webpack": "^6.2.1",
