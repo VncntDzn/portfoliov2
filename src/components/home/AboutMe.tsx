@@ -21,7 +21,7 @@ const AboutMe = () => {
             }}
             transition={{ ease: "easeOut", duration: 1 }} */
         >
-            <Typography variant="h2">About Me</Typography>
+            <Typography variant="h2">About Vincent</Typography>
             <Typography variant="h5" sx={{ textDecoration: "underline" }}>
                 More than a developer
             </Typography>
@@ -43,7 +43,22 @@ const AboutMe = () => {
                     />
                 </Grid>
                 <Grid item container lg={6} sx={{ border: "3px solid blue" }}>
-                    xx
+                    <Typography sx={{textIndent: '2rem', lineHeight: '2.2rem', border:"3px solid", height:"fit-content"}}>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                    </Typography>
+                    {/* TODO: 
+                    1. Button 
+                    2. Navigate to about-me
+                    3. Has same circle background "See Works"
+                    4. when hovered the circle will expand its width same as Julius' Guevarra   
+                    */}
+                    <Typography sx={{height:"fit-content", border:"3px solid"}}>
+                        See More, 
+                    </Typography>
                 </Grid>
             </Grid>
         </Box>

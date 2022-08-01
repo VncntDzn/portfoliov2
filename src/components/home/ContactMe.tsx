@@ -6,16 +6,10 @@ import {
     useMediaQuery,
     useTheme,
 } from "@mui/material";
-import Counter from "components/Counter";
 
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
-import FeaturedCarousel from "./projects/FeaturedCarousel";
-import Poster from "./projects/Poster";
-import Creativ from "assets/projects/creativ.jpeg";
-import Description from "./projects/Description";
-import Image from "next/image";
-const Projects = () => {
+const ContactMe = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up("xl"));
     const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
@@ -46,7 +40,7 @@ const Projects = () => {
                 paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 40 },
                 height: { lg: !showProjects ? "100vh" : "120vh" },
-                backgroundColor: "#F4F4F4",
+                
             }}
             display="flex"
             flexDirection="column"
@@ -61,7 +55,7 @@ const Projects = () => {
                         fontSize: { xs: 30, lg: 80 },
                     }}
                 >
-                    Featured Projects
+                    Contact Vincent
                 </Typography>
                 <Typography
                     component={motion.p}
@@ -72,19 +66,10 @@ const Projects = () => {
                     Take a look on my projects.
                 </Typography>
             </Box>
-
-            <FeaturedCarousel />
-            {/*  {smMatch ? (
-                <FeaturedCarousel />
-            ) : (
-                <Poster show={showProjects} />
-            )} */}
-
-            <Counter count={2} />
         </Box>
     );
 };
 
-Projects.propTypes = {};
+ContactMe.propTypes = {};
 
-export default Projects;
+export default ContactMe;

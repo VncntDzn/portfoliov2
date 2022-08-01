@@ -1,5 +1,6 @@
-import { LandingPage } from "components";
+import { ContactMe, LandingPage } from "components";
 import Footer from "components/Footer";
+import AboutMe from "components/home/AboutMe";
 import Projects from "components/home/Projects";
 
 import type { NextPage } from "next";
@@ -9,8 +10,9 @@ const Home: NextPage = () => {
     return (
         <PageContainer title="Home">
             <LandingPage />
-            {/*  <AboutMe /> */}
+            <AboutMe />
             <Projects />
+            <ContactMe />
             <Footer />
         </PageContainer>
     );
