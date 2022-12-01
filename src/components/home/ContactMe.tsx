@@ -40,7 +40,6 @@ const ContactMe = () => {
                 paddingY: { xs: 5, lg: 10 },
                 paddingX: { xs: 5, lg: 20, xl: 40 },
                 height: { lg: !showProjects ? "100vh" : "120vh" },
-                
             }}
             display="flex"
             flexDirection="column"
@@ -56,14 +55,6 @@ const ContactMe = () => {
                     }}
                 >
                     Contact Vincent
-                </Typography>
-                <Typography
-                    component={motion.p}
-                    animate={textAnimation}
-                    onClick={handleStartProjectShowcase}
-                    sx={{ cursor: "pointer", textAlign: "center" }}
-                >
-                    Take a look on my projects.
                 </Typography>
             </Box>
         </Box>

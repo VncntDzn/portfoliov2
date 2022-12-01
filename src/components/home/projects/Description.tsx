@@ -1,8 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 const Description = props => {
     const EASE_OUT_TRANSITION = { ease: "easeIn", duration: 1.5, delay: 1 };
     return (
@@ -13,15 +11,37 @@ const Description = props => {
 
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                flexDirection: "column",
             }}
         >
             <Typography
-                textAlign="center"
-                animate={{
-                    opacity: 1,
+                sx={{
+                    display: {
+                        xs: "none",
+                        lg: "inline-block",
+                        textAlign: "justify",
+                        textIndent: "2rem",
+                        lineHeight: "2.2rem",
+                    },
                 }}
-                component={motion.p}
+            >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+            </Typography>
+            <Typography
+                textAlign="left"
+                alignSelf="flex-start"
+                sx={{
+                    cursor: "pointer",
+                    color: "green",
+                    ":hover": {
+                        color: "red",
+                    },
+                }}
             >
                 View Project
             </Typography>

@@ -1,90 +1,59 @@
-import {
-    Box,
-    Card,
-    Grid,
-    Typography,
-    useMediaQuery,
-    useTheme,
-} from "@mui/material";
-import Counter from "components/Counter";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
-import { motion, useAnimation } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import theme from "theme";
 import FeaturedCarousel from "./projects/FeaturedCarousel";
-import Poster from "./projects/Poster";
-import Creativ from "assets/projects/creativ.jpeg";
-import Description from "./projects/Description";
-import Image from "next/image";
 const Projects = () => {
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up("xl"));
     const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
-    const controls = useAnimation();
-    const textAnimation = useAnimation();
-    const [showProjects, setShowProjects] = useState(false);
+    const [whileInViewLocation, setWhileInViewLocation] = useState({});
 
-    const handleStartProjectShowcase = async () => {
-        controls.start({
-            y: "-50%",
-            x: matches ? "-22.5rem" : "-15rem",
-            transition: { duration: 2 },
-            display: "block",
-        });
-        await textAnimation.start({
-            x: "-13rem",
-            transition: { duration: 2, delay: 2 },
-
-            textDecoration: "underline",
-        });
-        return setShowProjects(!showProjects);
-    };
+    useEffect(() => {
+        if (smMatch) {
+            setWhileInViewLocation({ y: "10%", x: "-5%" });
+        } else {
+            setWhileInViewLocation({ y: "10%", x: "-26%" });
+        }
+    }, [smMatch]);
     return (
-        <Box
-            zIndex={1}
-            sx={{
-                background: "white",
-                paddingY: { xs: 5, lg: 10 },
-                paddingX: { xs: 5, lg: 20, xl: 40 },
-                height: { lg: !showProjects ? "100vh" : "120vh" },
-                backgroundColor: "#F4F4F4",
-            }}
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            position="relative"
-        >
-            <Box component={motion.div} animate={controls} zIndex={1}>
+        <Box height="100vh">
+            <Box
+                component={motion.div}
+                animate={whileInViewLocation}
+                transition={{
+                    duration: 1,
+                    delay: 1,
+                }}
+                textAlign="center"
+                initial={{
+                    y: "30rem",
+                }}
+            >
                 <Typography
-                    variant="h2"
                     sx={{
-                        fontSize: { xs: 30, lg: 80 },
+                        fontSize: { xs: 35, lg: 55 },
                     }}
                 >
                     Featured Projects
                 </Typography>
-                <Typography
-                    component={motion.p}
-                    animate={textAnimation}
-                    onClick={handleStartProjectShowcase}
-                    sx={{ cursor: "pointer", textAlign: "center" }}
-                >
-                    Take a look on my projects.
-                </Typography>
             </Box>
-
-            <FeaturedCarousel />
-            {/*  {smMatch ? (
+            <Box
+                component={motion.div}
+                initial={{ opacity: 0, x: "-20rem" }}
+                whileInView={{
+                    x: "13%",
+                    y: "5%",
+                    width: "80vw",
+                    opacity: 1,
+                }}
+                transition={{
+                    duration: 2,
+                }}
+            >
                 <FeaturedCarousel />
-            ) : (
-                <Poster show={showProjects} />
-            )} */}
-
-            <Counter count={2} />
+            </Box>
         </Box>
     );
 };
-
-Projects.propTypes = {};
 
 export default Projects;
