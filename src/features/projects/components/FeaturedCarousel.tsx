@@ -97,7 +97,6 @@ const FeaturedCarousel = props => {
                                         </ButtonNext>
                                     </Box>
                                 </Box>
-                                <Divider sx={{ paddingBottom: 1 }} />
                                 <Grid
                                     container
                                     marginTop={10}

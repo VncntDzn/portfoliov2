@@ -1,21 +1,24 @@
-import { ContactMe, LandingPage } from "components";
-import Footer from "components/Footer";
-import AboutMe from "components/home/AboutMe";
-import Projects from "components/home/Projects";
+import AboutMe from "features/about-me";
+import ContactMe from "features/contact-me";
+import LandingPage from "features/landing-page";
+import Projects from "features/projects";
+import PageContainer from "layouts/PageContainer";
+import { ReactNode } from "react";
+import { NextPageWithLayout } from "./_app";
 
-import type { NextPage } from "next";
-
-import PageContainer from "../layouts";
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
     return (
-        <PageContainer title="Home">
+        <>
             <LandingPage />
             <AboutMe />
             <Projects />
             <ContactMe />
-            <Footer />
-        </PageContainer>
+        </>
     );
+};
+
+Home.getLayout = function getLayout(page: ReactNode) {
+    return <PageContainer description="My portfolio">{page}</PageContainer>;
 };
 
 export default Home;

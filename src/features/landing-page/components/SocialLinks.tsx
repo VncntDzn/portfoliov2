@@ -37,7 +37,7 @@ const SocialLinks = () => {
             sx={{
                 display: { xs: "none", md: "flex" },
                 position: "absolute",
-                right: "13%",
+                right: "8.5%",
                 bottom: 100,
                 writingMode: "vertical-lr",
                 height: 250,

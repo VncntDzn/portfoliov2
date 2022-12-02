@@ -1,7 +1,10 @@
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRightAlt";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 const SeeWorks = () => {
+    const router = useRouter();
+
     const CONTAINER = {
         initial: {
             opacity: 0,
@@ -12,6 +15,10 @@ const SeeWorks = () => {
         },
     };
     const SIZE = { xs: 70, lg: 100 };
+
+    const handleNavigateToProjects = () => {
+        router.push("#projects");
+    };
     return (
         <Box
             component={motion.div}
@@ -40,12 +47,14 @@ const SeeWorks = () => {
                     duration: 1,
                     ease: "linear",
                 }}
+                onClick={handleNavigateToProjects}
             >
                 <Typography
                     fontWeight={700}
                     sx={{
                         fontSize: { xs: 13, md: 15 },
                         marginLeft: { xs: 3, lg: 5 },
+                        cursor: "pointer"
                     }}
                 >
                     SEE MY WORKS

@@ -15,7 +15,7 @@ const Counter = ({ count }: { count: string | number }) => {
                 zIndex: 1,
                 position: "absolute",
                 top: { xs: 50, lg: 30 },
-                right: { xs: 70, sm: '15%', lg: "20%" },
+                right: { xs: 70, sm: '15%', lg: "17%" },
             }}
         >
             <Typography

@@ -2,27 +2,32 @@ import { Box, Divider, Typography } from "@mui/material";
 import Counter from "components/Counter";
 
 import { motion } from "framer-motion";
-import Circle from "./landing-page/Circle";
-import ScrollArrow from "./landing-page/ScrollArrow";
-import SeeWorks from "./landing-page/SeeWorks";
-import SocialLinks from "./landing-page/SocialLinks";
-
-const EASE_OUT_TRANSITION = { ease: "easeOut", duration: 1.5 };
-const X_ANIMATE = {
-    TEXT_ANIMATE: {
-        x: "5%",
-    },
-};
-const TEXT_TITLE = {
-    ...X_ANIMATE,
-    TEXT_INITIAL: { x: "-110%" },
-};
-const TEXT_SUBTITLE = {
-    ...X_ANIMATE,
-    TEXT_INITIAL: { x: "110%" },
-};
+import { EASE_OUT_TRANSITION } from "helpers";
+import Circle from "./components/Circle";
+import ScrollArrow from "./components/ScrollArrow";
+import SeeWorks from "./components/SeeWorks";
+import SocialLinks from "./components/SocialLinks";
 
 const LandingPage = () => {
+    const TEN_PERCENT = "10%";
+    const TEXT_TITLE_ANIMATION = {
+        TEXT_ANIMATION: {
+            x: "8%",
+        },
+        TEXT_INITIAL_ANIMATION: {
+            x: "-110%",
+        },
+    };
+    const TEXT_SUBTITLE_ANIMATION = {
+        TEXT_ANIMATION: {
+            x: TEN_PERCENT,
+        },
+        TEXT_INITIAL_ANIMATION: {
+            x: "110%",
+        },
+    };
+
+   
     return (
         <Box
             display="flex"
@@ -34,7 +39,7 @@ const LandingPage = () => {
             sx={{
                 backgroundColor: "#F4F4F4",
                 height: { xs: "100vh", sm: "40vh", md: "100vh" },
-                paddingX: { xs: 5, md: 20, lg: 40 },
+                paddingX: { xs: 5, md: 20, lg: 30 },
             }}
         >
             <Divider
@@ -44,7 +49,7 @@ const LandingPage = () => {
                     display: { xs: "none", md: "flex" },
                     height: { xs: "none", md: "70%", lg: "80%", xl: "83%" },
                     position: "absolute",
-                    left: "15%",
+                    left: "11%",
                 }}
             />
 
@@ -53,20 +58,19 @@ const LandingPage = () => {
                 alignItems="center"
                 width="100%"
                 component={motion.div}
-                variants={TEXT_TITLE}
+                variants={TEXT_TITLE_ANIMATION}
                 transition={EASE_OUT_TRANSITION}
-                initial="TEXT_INITIAL"
-                animate="TEXT_ANIMATE"
+                initial="TEXT_INITIAL_ANIMATION"
+                animate="TEXT_ANIMATION"
                 whileHover={{
-                    x: "-10%",
+                    x: "-2%",
                 }}
                 zIndex={1}
             >
                 <Typography
-                    variant="h1"
                     fontWeight={700}
                     sx={{
-                        fontSize: { xs: 30, sm: 50, md: 60, lg: 70, xl: 80 },
+                        fontSize: { xs: 30, sm: 50, md: 60, lg: 75, xl: 90 },
                         marginX: 1,
                     }}
                 >
@@ -85,10 +89,10 @@ const LandingPage = () => {
                 alignItems={"flex-start"}
                 width="100%"
                 component={motion.div}
-                variants={TEXT_SUBTITLE}
+                variants={TEXT_SUBTITLE_ANIMATION}
                 transition={EASE_OUT_TRANSITION}
-                initial="TEXT_INITIAL"
-                animate="TEXT_ANIMATE"
+                initial="TEXT_INITIAL_ANIMATION"
+                animate="TEXT_ANIMATION"
                 zIndex={1}
             >
                 <Box
@@ -98,7 +102,7 @@ const LandingPage = () => {
                     component={motion.div}
                     transition={EASE_OUT_TRANSITION}
                     whileHover={{
-                        x: "10%",
+                        x: TEN_PERCENT,
                     }}
                 >
                     <Divider
@@ -111,7 +115,7 @@ const LandingPage = () => {
                         fontWeight={700}
                         color="#8c8c8c"
                         sx={{
-                            fontSize: { xs: 20, md: 40 },
+                            fontSize: { xs: 20, md: 40, xl: 45 },
                         }}
                     >
                         front-end developer
@@ -131,8 +135,8 @@ const LandingPage = () => {
                     position: "absolute",
                     top: 10,
                     bottom: 80,
-                    left: "15%",
-                    width: "70%",
+                    left: "11%",
+                    width: "80%",
                 }}
             />
         </Box>

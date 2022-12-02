@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import theme from "theme";
-import FeaturedCarousel from "./projects/FeaturedCarousel";
+import FeaturedCarousel from "./components/FeaturedCarousel";
 const Projects = () => {
     const smMatch = useMediaQuery(theme.breakpoints.down("sm"));
     const [whileInViewLocation, setWhileInViewLocation] = useState({});
@@ -16,19 +16,15 @@ const Projects = () => {
         }
     }, [smMatch]);
     return (
-        <Box height="100vh">
-            <Box
-                component={motion.div}
-                animate={whileInViewLocation}
-                transition={{
-                    duration: 1,
-                    delay: 1,
-                }}
-                textAlign="center"
-                initial={{
-                    y: "30rem",
-                }}
-            >
+        <Box
+            height="100vh"
+            sx={{
+                backgroundColor: "#F4F4F4",
+                paddingX: { xs: 5, md: 20, lg: 23 },
+                paddingY: { xs: 2, md: 5 },
+            }}
+        >
+            <Box>
                 <Typography
                     sx={{
                         fontSize: { xs: 35, lg: 55 },
@@ -36,14 +32,14 @@ const Projects = () => {
                 >
                     Featured Projects
                 </Typography>
+                <hr />
             </Box>
             <Box
                 component={motion.div}
-                initial={{ opacity: 0, x: "-20rem" }}
+                initial={{ opacity: 0, x: "-15rem" }}
                 whileInView={{
-                    x: "13%",
-                    y: "5%",
-                    width: "80vw",
+                    x: "0%",
+
                     opacity: 1,
                 }}
                 transition={{

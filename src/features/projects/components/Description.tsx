@@ -1,14 +1,17 @@
 import { Box, Typography } from "@mui/material";
-
 import { motion } from "framer-motion";
-const Description = props => {
-    const EASE_OUT_TRANSITION = { ease: "easeIn", duration: 1.5, delay: 1 };
+import { useRouter } from "next/router";
+const Description = () => {
+    const router = useRouter();
+
+    const handleNavigateToProject = () => {
+        router.push("/featured-project");
+    };
     return (
         <Box
             sx={{
                 bottom: 0,
                 left: 0,
-
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
@@ -35,13 +38,15 @@ const Description = props => {
             <Typography
                 textAlign="left"
                 alignSelf="flex-start"
-                sx={{
+                component={motion.p}
+                color="green"
+                whileHover={{
+                    color: "#8c8c8c",
                     cursor: "pointer",
-                    color: "green",
-                    ":hover": {
-                        color: "red",
-                    },
+                    letterSpacing: "1px",
+                    textDecoration: "underline",
                 }}
+                onClick={handleNavigateToProject}
             >
                 View Project
             </Typography>
