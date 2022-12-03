@@ -1,8 +1,9 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import MyPic from "assets/pic.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import EastIcon from "@mui/icons-material/East";
 const AboutMe = () => {
     const router = useRouter();
 
@@ -11,10 +12,10 @@ const AboutMe = () => {
     };
     return (
         <Box
-            height="100vh"
             sx={{
                 paddingX: { xs: 5, md: 20, lg: 23 },
                 paddingY: { xs: 2, md: 5 },
+                height: { lg: "100vh" },
             }}
         >
             <Typography
@@ -55,8 +56,8 @@ const AboutMe = () => {
                         sx={{
                             boxShadow: "-30px 30px 10px gray",
                             borderRadius: "20px",
-                            height: { xs: 250, lg: 600 },
-                            width: { xs: 250, lg: 600 },
+                            height: { xs: 250, lg: 500 },
+                            width: { xs: 250, lg: 500 },
                             cursor: "not-allowed",
                         }}
                         component={motion.div}
@@ -116,16 +117,28 @@ const AboutMe = () => {
                         took a galley of type and scrambled it to make a type
                         specimen book.
                     </Typography>
-                    <Typography
-                        component="p"
-                        sx={{
-                            textIndent: 0,
-                            cursor: "pointer",
-                        }}
+                    <Box
+                        display="flex"
+                        alignItems="center"
                         onClick={handleNavigateToAboutMe}
                     >
-                        Know More
-                    </Typography>
+                        <Typography
+                            component="strong"
+                            sx={{
+                                fontSize: { xs: 13 },
+                                textTransform: "uppercase",
+                                color: "#8d8d8d",
+                                textIndent: 0,
+                                cursor: "pointer",
+                                fontWeight: 700,
+                            }}
+                        >
+                            Know more
+                        </Typography>
+                        <IconButton>
+                            <EastIcon />
+                        </IconButton>
+                    </Box>
                 </Grid>
             </Grid>
         </Box>

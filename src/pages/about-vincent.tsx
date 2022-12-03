@@ -1,6 +1,5 @@
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import WestIcon from "@mui/icons-material/West";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
-import Footer from "components/Footer";
 import { motion } from "framer-motion";
 import PageContainer from "layouts/PageContainer";
 import { useRouter } from "next/router";
@@ -19,9 +18,16 @@ const AboutVincent: NextPageWithLayout = () => {
                 paddingY: { xs: 2, md: 5 },
             }}
         >
-            <Box display="flex" alignItems="center">
-                <IconButton size="small" onClick={handleNavigateToHome}>
-                    <KeyboardBackspaceIcon
+            <Box
+                display="flex"
+                alignItems="center"
+                onClick={handleNavigateToHome}
+                sx={{
+                    cursor: "pointer",
+                }}
+            >
+                <IconButton size="small">
+                    <WestIcon
                         sx={{
                             color: "#8d8d8d",
                         }}
@@ -134,6 +140,7 @@ const AboutVincent: NextPageWithLayout = () => {
                         sx={{
                             textIndent: 0,
                             cursor: "pointer",
+                            color: "green",
                         }}
                     >
                         Know More
@@ -148,10 +155,12 @@ const AboutVincent: NextPageWithLayout = () => {
                     marginTop: { xs: 3, md: 5, lg: 10 },
                     gap: { xs: 1, md: 0 },
 
-                    paddingX: { xs: 5, md: 10, },
+                    paddingX: { xs: 5, md: 10 },
                     paddingY: { xs: 2, md: 5 },
 
                     backgroundColor: "#F4F4F4",
+                    display: "flex",
+                    flexDirection: { xs: "column-reverse", md: "row" },
                 }}
             >
                 <Grid
@@ -160,7 +169,9 @@ const AboutVincent: NextPageWithLayout = () => {
                     lg={6}
                     sx={{
                         display: "flex",
+
                         height: "fit-content",
+                        marginTop: { xs: 5, md: 0 },
                     }}
                     component={motion.div}
                     initial={{ opacity: 0, x: "-10rem" }}
@@ -172,7 +183,13 @@ const AboutVincent: NextPageWithLayout = () => {
                         duration: 2,
                     }}
                 >
-                    <Typography variant="h3">Previous Works</Typography>
+                    <Typography
+                        sx={{
+                            fontSize: { xs: 25, lg: 55 },
+                        }}
+                    >
+                        Previous Works
+                    </Typography>
                     <Typography
                         sx={{
                             textIndent: "2rem",
@@ -214,12 +231,15 @@ const AboutVincent: NextPageWithLayout = () => {
                     item
                     container
                     lg={6}
-                    sx={{ marginTop: { xs: 5 } }}
+                    sx={{
+                        marginTop: { xs: 5 },
+                        display: "flex",
+                        justifyContent: "center",
+                    }}
                     component={motion.div}
                     initial={{ opacity: 0, x: "10rem" }}
                     whileInView={{
                         x: "0%",
-
                         opacity: 1,
                     }}
                     transition={{

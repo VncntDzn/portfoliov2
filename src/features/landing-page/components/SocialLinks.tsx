@@ -13,7 +13,7 @@ const SocialLinks = () => {
             link: "",
         },
         {
-            name: "Instagram",
+            name: "Blogs",
             link: "",
         },
     ];
@@ -57,7 +57,7 @@ const SocialLinks = () => {
                     >
                         {name}
                     </Typography>
-                    {name !== "Instagram" && (
+                    {name !== "Blogs" && (
                         <Typography color="#8c8c8c">/</Typography>
                     )}
                 </Fragment>
