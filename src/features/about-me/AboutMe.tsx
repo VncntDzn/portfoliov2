@@ -56,8 +56,8 @@ const AboutMe = () => {
                         sx={{
                             boxShadow: "-30px 30px 10px gray",
                             borderRadius: "20px",
-                            height: { xs: 250, lg: 500 },
-                            width: { xs: 250, lg: 500 },
+                            height: { xs: 250, lg: 500, xl: 600 },
+                            width: { xs: 250, lg: 500 ,xl: 600},
                             cursor: "not-allowed",
                         }}
                         component={motion.div}
