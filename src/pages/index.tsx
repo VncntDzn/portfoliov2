@@ -11,8 +11,9 @@ const Home: NextPageWithLayout = () => {
         <>
             <LandingPage />
             <AboutMe />
+            {/*    
             <Projects />
-            <ContactMe />
+            <ContactMe /> */}
         </>
     );
 };

@@ -41,6 +41,7 @@ const SocialLinks = () => {
                 bottom: 100,
                 writingMode: "vertical-lr",
                 height: 250,
+                zIndex:1
             }}
         >
             {LINKS.map(({ name }) => (
@@ -49,7 +50,7 @@ const SocialLinks = () => {
                         component={motion.p}
                         color="#8c8c8c"
                         whileHover={{
-                            color: "black",
+                            color: "#1d1d1d",
                             cursor: "pointer",
                             letterSpacing: "2px",
                             textDecoration: "underline",

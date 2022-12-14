@@ -1,9 +1,9 @@
-import { Box, Grid, IconButton, Typography } from "@mui/material";
-import MyPic from "assets/pic.jpg";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 import EastIcon from "@mui/icons-material/East";
+import { Box, Grid, Typography } from "@mui/material";
+import MyPic from "assets/pic.jpg";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useRouter } from "next/router";
 const AboutMe = () => {
     const router = useRouter();
 
@@ -56,8 +56,8 @@ const AboutMe = () => {
                         sx={{
                             boxShadow: "-30px 30px 10px gray",
                             borderRadius: "20px",
-                            height: { xs: 250, lg: 500, xl: 600 },
-                            width: { xs: 250, lg: 500 ,xl: 600},
+                            height: { xs: 250, lg: 500 },
+                            width: { xs: 250, lg: 500 },
                             cursor: "not-allowed",
                         }}
                         component={motion.div}
@@ -117,12 +117,34 @@ const AboutMe = () => {
                         took a galley of type and scrambled it to make a type
                         specimen book.
                     </Typography>
+
                     <Box
-                        display="flex"
-                        alignItems="center"
-                        onClick={handleNavigateToAboutMe}
+                        component={motion.div}
+                        whileHover={{
+                            width: 138,
+                            height: 50,
+                            borderRadius: "10px",
+                        }}
+                        transition={{
+                            ease: "easeIn",
+                            duration: 1,
+                            bounce: 0.5,
+                        }}
+                        sx={{
+                            backgroundColor: "#e1e1e1",
+                            zIndex: -1,
+
+                            borderRadius: "50%",
+                            padding: "0.8rem",
+
+                            marginTop: 1,
+                            position: "relative",
+                            height: 70,
+                            width: 70,
+                        }}
                     >
                         <Typography
+                            onClick={handleNavigateToAboutMe}
                             component="strong"
                             sx={{
                                 fontSize: { xs: 13 },
@@ -131,13 +153,18 @@ const AboutMe = () => {
                                 textIndent: 0,
                                 cursor: "pointer",
                                 fontWeight: 700,
+                                ":hover": {
+                                    color: "#1d1d1d",
+                                },
+                                display: "flex",
+                                alignItems: "center",
+
+                                width: { xs: 150, lg: 200 },
+                                position: { lg: "absolute" },
                             }}
                         >
-                            Know more
+                            Know more <EastIcon />
                         </Typography>
-                        <IconButton>
-                            <EastIcon />
-                        </IconButton>
                     </Box>
                 </Grid>
             </Grid>

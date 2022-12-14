@@ -1,80 +1,73 @@
-import { Box, IconButton, Typography } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRightAlt";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+const CONTAINER = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        y: "10%",
+    },
+};
 const SeeWorks = () => {
     const router = useRouter();
-
-    const CONTAINER = {
-        initial: {
-            opacity: 0,
-        },
-        animate: {
-            opacity: 1,
-            y: "10%",
-        },
-    };
-    const SIZE = { xs: 70, lg: 100 };
-
     const handleNavigateToProjects = () => {
         router.push("#projects");
     };
     return (
         <Box
+            display="flex"
+            alignItems="center"
             component={motion.div}
             variants={CONTAINER}
             initial="initial"
             animate="animate"
+            whileHover={{
+                width: 160,
+                height: 50,
+                borderRadius: "10px",
+                y: "-60%",
+                transition: {
+                    duration: 1,
+                },
+            }}
             transition={{
-                ease: "easeIn",
-                duration: 1,
-                delay: 2,
-                bounce: 0.5,
-                repeatType: "mirror",
+                ease: "easeInOut",
+                duration: 0.5,
             }}
             sx={{
-                marginTop: { xs: 2, md: 3 },
+                backgroundColor: "#1d1d1d",
+                borderRadius: "50%",
+                padding: "0.8rem",
+
+                position: "absolute",
+                bottom: "27%",
+                left: "22%",
+                zIndex: 1,
+                cursor: "pointer",
+                display: { xs: "none", lg: "block" },
+                height: 70,
+                width: 70,
             }}
+            onClick={handleNavigateToProjects}
         >
-            <Box
-                display="flex"
-                alignItems="center"
-                component={motion.div}
-                whileHover={{
-                    x: "20%",
-                }}
-                transition={{
-                    duration: 1,
-                    ease: "linear",
-                }}
-                onClick={handleNavigateToProjects}
-            >
-                <Typography
-                    fontWeight={700}
-                    sx={{
-                        fontSize: { xs: 13, md: 15 },
-                        marginLeft: { xs: 3, lg: 5 },
-                        cursor: "pointer"
-                    }}
-                >
-                    SEE MY WORKS
-                </Typography>
-                <IconButton>
-                    <ArrowRightIcon />
-                </IconButton>
-            </Box>
-            <Box
+            <Typography
+                fontWeight={700}
+                color="white"
                 sx={{
-                    backgroundColor: "#e1e1e1",
+                    fontSize: { xs: 13, md: 15 },
+
+                    display: "flex",
+                    alignItems: "center",
+                    width: { xs: 150, lg: 200 },
                     position: "absolute",
-                    bottom: { xs: -20, lg: -35 },
-                    left: { xs: 15 },
-                    zIndex: -1,
-                    height: SIZE,
-                    width: SIZE,
-                    borderRadius: "50%",
                 }}
-            />
+            >
+                SEE MY WORKS
+                <ArrowRightIcon />
+            </Typography>
         </Box>
     );
 };
