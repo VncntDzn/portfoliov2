@@ -13,7 +13,7 @@ const PreviousWorks = () => {
                 flexWrap="wrap"
             >
                 {WORKS_DATA.map(
-                    ({ title, workDate, workType, position, description }) => (
+                    ({ title, workDate, position, description }) => (
                         <Box
                             key={title}
                             sx={{
