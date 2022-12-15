@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { EASE_OUT_TRANSITION } from "helpers";
 import Image from "next/image";
 import { useRouter } from "next/router";
-const AboutMe = () => {
+const AboutVincent = () => {
     const router = useRouter();
 
-    const handleNavigateToAboutMe = () => {
+    const handleNavigateToAboutVincent = () => {
         router.push("/about-vincent");
     };
     return (
@@ -134,7 +134,7 @@ const AboutMe = () => {
                         }}
                     >
                         <Typography
-                            onClick={handleNavigateToAboutMe}
+                            onClick={handleNavigateToAboutVincent}
                             component="strong"
                             sx={{
                                 fontSize: { xs: 13 },
@@ -162,4 +162,4 @@ const AboutMe = () => {
     );
 };
 
-export default AboutMe;
+export default AboutVincent;

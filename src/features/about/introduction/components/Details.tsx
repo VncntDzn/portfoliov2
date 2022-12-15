@@ -12,19 +12,23 @@ const Details = () => {
                     fontWeight: 700,
                 }}
             >
-                I'm Vincent P. Dizon. &nbsp;&nbsp;&nbsp; I create website
-            </Typography>
-            <Typography
-                sx={{
-                    textIndent: 0,
-                    cursor: "pointer",
-                    color: "green",
-                }}
-            >
-                Know More
+                I'm Vincent P. Dizon.
             </Typography>
 
+            <Typography lineHeight={2}>
+                It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.
+            </Typography>
+            <Typography lineHeight={2}>
+                It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.
+            </Typography>
             <Typography
+                color="#8d8d8d"
                 component="address"
                 sx={{
                     lineHeight: "2.2rem",
