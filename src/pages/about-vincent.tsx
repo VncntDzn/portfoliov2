@@ -1,14 +1,11 @@
 import WestIcon from "@mui/icons-material/West";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
-import { motion } from "framer-motion";
+import Introduction from "features/about-me/components/Introduction";
+import PreviousWorks from "features/about-me/components/PreviousWorks";
 import PageContainer from "layouts/PageContainer";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Principles from "features/about-me/components/Principles";
-import Introduction from "features/about-me/components/Introduction";
-import PreviousWorks from "features/about-me/components/PreviousWorks";
 const AboutVincent: NextPageWithLayout = () => {
     const router = useRouter();
 

@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { PRINCIPLES_DATA } from "../data";
 const Principles = () => {
     return (
@@ -37,9 +37,9 @@ const Principles = () => {
             >
                 Over the years, I developed a UX for good manifesto that guides
                 my design work and who I do business with (clients or partners).
-                If you like the sound of this, hopefully we'll be a good match.
+                If you like the sound of this, hopefully well be a good match.
             </Typography>
-            
+
             <Box
                 sx={{
                     display: "flex",
