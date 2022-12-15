@@ -8,9 +8,9 @@ const AboutHeader = () => {
                 display="flex"
                 alignSelf="center"
                 gap={1}
+                width="fit-content"
                 component={Button}
                 href="/"
-                width="fit-content"
             >
                 <WestIcon htmlColor="#8d8d8d" />
                 <Typography

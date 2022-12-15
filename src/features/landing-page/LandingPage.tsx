@@ -1,11 +1,11 @@
 import { Box, Divider } from "@mui/material";
 import Counter from "components/Counter";
 
-import Circle from "./components/Circle";
-import ScrollArrow from "./components/ScrollArrow";
-import SeeWorks from "./components/SeeWorks";
-import Slogan from "./components/Slogan";
-import SocialLinks from "./components/SocialLinks";
+import Circle from "./home/Circle";
+import ScrollArrow from "./home/ScrollArrow";
+import SeeWorks from "./home/SeeWorks";
+import Slogan from "./home/Slogan";
+import SocialLinks from "./home/SocialLinks";
 
 const LandingPage = () => {
     return (

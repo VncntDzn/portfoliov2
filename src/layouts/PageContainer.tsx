@@ -18,7 +18,7 @@ const PageContainer = ({
         <Box>
             <Head>
                 {title ? (
-                    <title>VD | {title}</title>
+                    <title>{`VD | ${title}`}</title>
                 ) : (
                     <title>Vincent Dizon</title>
                 )}

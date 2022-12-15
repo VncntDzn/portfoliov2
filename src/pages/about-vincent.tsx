@@ -43,7 +43,7 @@ const AboutVincent: NextPageWithLayout = () => {
 };
 
 AboutVincent.getLayout = function getLayout(page: ReactNode) {
-    return <PageContainer description="My portfolio">{page}</PageContainer>;
+    return <PageContainer title="About" description="My portfolio">{page}</PageContainer>;
 };
 
 export default AboutVincent;

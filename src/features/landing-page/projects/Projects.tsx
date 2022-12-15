@@ -1,6 +1,7 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 
 import { motion } from "framer-motion";
+import { EASE_OUT_TRANSITION } from "helpers";
 import { useEffect, useState } from "react";
 import theme from "theme";
 import FeaturedCarousel from "./components/FeaturedCarousel";
@@ -42,9 +43,7 @@ const Projects = () => {
 
                     opacity: 1,
                 }}
-                transition={{
-                    duration: 2,
-                }}
+                transition={EASE_OUT_TRANSITION}
             >
                 <FeaturedCarousel />
             </Box>

@@ -244,7 +244,7 @@ const FeaturedProject: NextPageWithLayout = () => {
 };
 
 FeaturedProject.getLayout = function getLayout(page: ReactNode) {
-    return <PageContainer description="My portfolio">{page}</PageContainer>;
+    return <PageContainer title="My Project" description="My portfolio">{page}</PageContainer>;
 };
 
 export default FeaturedProject;

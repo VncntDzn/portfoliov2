@@ -30,7 +30,7 @@ const Slogan = () => {
                 variants={TEXT_TITLE_ANIMATION}
                 transition={EASE_OUT_TRANSITION}
                 initial="TEXT_INITIAL_ANIMATION"
-                animate="TEXT_ANIMATION"
+                whileInView="TEXT_ANIMATION"
                 whileHover={{
                     x: "-2%",
                 }}
@@ -63,7 +63,7 @@ const Slogan = () => {
                 variants={TEXT_SUBTITLE_ANIMATION}
                 transition={EASE_OUT_TRANSITION}
                 initial="TEXT_INITIAL_ANIMATION"
-                animate="TEXT_ANIMATION"
+                whileInView="TEXT_ANIMATION"
                 zIndex={1}
                 sx={{
                     width: { xs: "95%", sm: "90%", lg: "100%" },

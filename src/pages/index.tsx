@@ -1,7 +1,7 @@
 import ContactMe from "features/contact-me";
 import LandingPage from "features/landing-page";
 import AboutMe from "features/landing-page/about-vincent/AboutMe";
-import Projects from "features/projects";
+import Projects from "features/landing-page/projects/Projects";
 import PageContainer from "layouts/PageContainer";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
@@ -10,10 +10,9 @@ const Home: NextPageWithLayout = () => {
     return (
         <>
             <LandingPage />
-            <AboutMe /> <Projects />
-            {/*    
-           
-            <ContactMe /> */}
+            <AboutMe />
+            <Projects />
+            {/* <ContactMe /> */}
         </>
     );
 };

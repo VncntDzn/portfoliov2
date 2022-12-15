@@ -2,6 +2,7 @@ import EastIcon from "@mui/icons-material/East";
 import { Box, Grid, Typography } from "@mui/material";
 import MyPic from "assets/pic.jpg";
 import { motion } from "framer-motion";
+import { EASE_OUT_TRANSITION } from "helpers";
 import Image from "next/image";
 import { useRouter } from "next/router";
 const AboutMe = () => {
@@ -48,9 +49,7 @@ const AboutMe = () => {
                         x: "0%",
                         opacity: 1,
                     }}
-                    transition={{
-                        duration: 2,
-                    }}
+                    transition={EASE_OUT_TRANSITION}
                 >
                     <Box
                         sx={{
@@ -86,9 +85,7 @@ const AboutMe = () => {
 
                         opacity: 1,
                     }}
-                    transition={{
-                        duration: 2,
-                    }}
+                    transition={EASE_OUT_TRANSITION}
                 >
                     <Typography
                         sx={{
@@ -97,7 +94,12 @@ const AboutMe = () => {
                             display: "flex",
                         }}
                     >
-                        <Typography component="span" variant="h1" marginTop={-1.1} marginRight={1}>
+                        <Typography
+                            component="span"
+                            variant="h1"
+                            marginTop={-1.1}
+                            marginRight={1}
+                        >
                             H
                         </Typography>
                         ello friend, I'm Alice — I'm an independent illustrator
