@@ -1,6 +1,6 @@
-import AboutMe from "features/about-me";
 import ContactMe from "features/contact-me";
 import LandingPage from "features/landing-page";
+import AboutMe from "features/landing-page/about-vincent/AboutMe";
 import Projects from "features/projects";
 import PageContainer from "layouts/PageContainer";
 import { ReactNode } from "react";

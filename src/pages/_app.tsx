@@ -1,5 +1,4 @@
 import { CssBaseline } from "@mui/material";
-import { AnimationProvider } from "contexts/AnimationContext";
 import type { AppProps } from "next/app";
 
 import type { NextPage } from "next";
@@ -18,9 +17,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     return getLayout(
         <>
             <CssBaseline />
-            <AnimationProvider>
-                <Component {...pageProps} />
-            </AnimationProvider>
+            <Component {...pageProps} />
         </>
     );
 }
