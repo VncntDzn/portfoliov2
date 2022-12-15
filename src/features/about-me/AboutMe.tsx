@@ -92,30 +92,18 @@ const AboutMe = () => {
                 >
                     <Typography
                         sx={{
-                            textIndent: "2rem",
-                            lineHeight: "2.2rem",
+                            lineHeight: "2rem",
                             height: "fit-content",
+                            display: "flex",
                         }}
                     >
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the standard
-                        dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type
-                        specimen book.
-                    </Typography>
-                    <Typography
-                        sx={{
-                            textIndent: "2rem",
-                            lineHeight: "2.2rem",
-                            height: "fit-content",
-                            display: { xs: "none", lg: "block" },
-                        }}
-                    >
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the standard
-                        dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type
-                        specimen book.
+                        <Typography component="span" variant="h1" marginTop={-1.1} marginRight={1}>
+                            H
+                        </Typography>
+                        ello friend, I'm Alice — I'm an independent illustrator
+                        and muralist! As a Bay Area native, I am based in San
+                        Francisco. My favorite corner of the internet is the
+                        Creative Cuties Discord that my friend Amy and I co-run!
                     </Typography>
 
                     <Box

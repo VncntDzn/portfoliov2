@@ -10,9 +10,9 @@ const Home: NextPageWithLayout = () => {
     return (
         <>
             <LandingPage />
-            <AboutMe />
+            <AboutMe /> <Projects />
             {/*    
-            <Projects />
+           
             <ContactMe /> */}
         </>
     );
