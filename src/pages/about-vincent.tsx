@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import { PreviousWorks, AboutHeader, Introduction } from "features/about-me";
+import { PreviousWorks, AboutHeader, Introduction } from "features/about";
 import PageContainer from "layouts/PageContainer";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";

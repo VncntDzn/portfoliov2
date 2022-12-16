@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { WORKS_DATA } from "../../data";
+import TaskList from "./TaskList";
 
 const container = {
     hidden: { opacity: 0 },
@@ -32,22 +33,31 @@ const ListOfWorks = () => {
             whileInView="show"
         >
             {WORKS_DATA.map(
-                ({ title, workDate, position, description, companyLogo }) => (
+                ({
+                    title,
+                    workDate,
+                    position,
+                    description,
+                    companyLogo,
+                    tasks,
+                }) => (
                     <Box
                         key={title}
                         display="flex"
                         justifyContent="space-between"
                         alignItems="center"
-                        my={3}
+                        mt={3}
                         sx={{
                             flexDirection: { xs: "column", sm: "row" },
                             alignItems: { xs: "center", sm: "flex-start" },
-                            gap: { xs: 2, md: 0 },
+                            gap: { xs: 2 },
+                        
                         }}
                         component={motion.div}
                         variants={item}
                     >
                         <Box
+                            flex="20%"
                             height={150}
                             sx={{
                                 position: "relative",
@@ -62,7 +72,7 @@ const ListOfWorks = () => {
                                 objectFit="contain"
                             />
                         </Box>
-                        <Box>
+                        <Box flex="80%">
                             <Typography variant="h6" fontWeight={700}>
                                 {title}
                             </Typography>
@@ -72,21 +82,10 @@ const ListOfWorks = () => {
                             <Typography fontStyle="oblique" variant="overline">
                                 {workDate}
                             </Typography>
-                            <Typography
-                                textAlign="justify"
-                                sx={{
-                                    textIndent: "2rem",
-                                    marginTop: 1,
-                                }}
-                            >
-                                {description}
+                            <Typography variant="subtitle1" fontWeight={600}>
+                                Projects
                             </Typography>
-                            <Typography component="li">
-                                {description}
-                            </Typography>
-                            <Typography component="li">
-                                {description}
-                            </Typography>
+                            <TaskList tasks={tasks} />
                         </Box>
                     </Box>
                 )

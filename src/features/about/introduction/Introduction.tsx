@@ -19,12 +19,8 @@ const Introduction = () => {
                 transition: { duration: 1.7, ease: "easeOut" },
             }}
         >
-            <Box>
-                <Photo />
-            </Box>
-            <Box>
-                <Details />
-            </Box>
+            <Photo />
+            <Details />
         </Box>
     );
 };

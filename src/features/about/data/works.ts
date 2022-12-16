@@ -5,11 +5,57 @@ const WORKS_DATA = [
         workType: "Full time",
         position: "Software Engineer",
         companyLogo: "cognizant.png",
-        description:
-            "I don't pretend expertise when I don't know something. \
-        If needed, freelancers I have experience working with \
-        may be involved in your project to ensure you've got the \
-        best people on our side.",
+        description: "A full time software engineer that was deployed to help",
+        tasks: [
+            {
+                projectType: "E-Signature",
+                role: "Software Engineer",
+                responsibilities: [
+                    "One of the developers who help to architect the project.",
+                    "Guided other developers that were unfamiliar to use React and its best practices.",
+                ],
+                tech_stack: [
+                    "NextJS",
+                    "Typescript",
+                    "Scss Modules",
+                    "Redux-Toolkit",
+                ],
+            },
+            {
+                projectType: "CMS",
+                role: "Software Engineer",
+                responsibilities: [
+                    "Developed front-end features for an existing project",
+                    "Developed graphql end-points for the front-end project",
+                ],
+                tech_stack: [
+                    "ReactJS",
+                    "Typescript",
+                    "Material UI",
+                    "GraphQL Apollo",
+                    "C#",
+                    ".Net",
+                    "GraphQL",
+                ],
+            },
+            {
+                projectType: "HRMS",
+                role: "Tech Lead",
+                responsibilities: [
+                    "Architected the project",
+                    "Assigned tasks to teammates",
+                    "Review PR and approve",
+                ],
+                tech_stack: [
+                    "NextJS",
+                    "Typescript",
+                    "Material UI",
+                    "React Query",
+                    "Postgres",
+                    "GoLang",
+                ],
+            },
+        ],
     },
     {
         title: "Vertere Global Solutions Inc.",
@@ -17,11 +63,17 @@ const WORKS_DATA = [
         workType: "Contractual",
         position: "Programmer Analyst II",
         companyLogo: "vertere.png",
-        description:
-            "Ethical design inspires trust and can be the difference \
-            between someone feeling safe and included, or frustrated \
-            and overwhelmed. But it doesn't happen by chance. It's a \
-            conscious choice.",
+        description: "Contracted and deployed to it's client",
+        tasks: [
+            {
+                projectType: "CMS",
+                role: "React Developer",
+                responsibilities: [
+                    "Deployed to its client and developed front-end features for an existing project",
+                ],
+                tech_stack: ["ReactJS", "Javascript", "SCSS", "AWS Amplify"],
+            },
+        ],
     },
     {
         title: "Plooma PH",
@@ -30,9 +82,26 @@ const WORKS_DATA = [
         position: "Frontend Developer",
         companyLogo: "plooma.png",
         description:
-            "If your work focuses on social change, charity work or you \
-            want to use tech for good, I'm happy to work around your \
-            budget. Simply email me and we'll see what we can do.",
+            "One of the pioneer developers of the startup that aimed to rival big e-commerce websites.",
+        tasks: [
+            {
+                projectType: "E-Commerce Website",
+                role: "Frontend Developer",
+                responsibilities: [
+                    "Developed the e-commerce landing page.",
+                    "Developed the front-end for shopping website.",
+                ],
+                tech_stack: ["ReactJS", "Javascript", "SCSS", "AWS Amplify"],
+            },
+            {
+                projectType: "E-Commerce Mobile App",
+                role: "React Native Developer",
+                responsibilities: [
+                    "Contributed to developed the cross platform e-commerce mobile app.",
+                ],
+                tech_stack: ["React Native", "Javascript"],
+            },
+        ],
     },
     {
         title: "Health Maintenancee Inc,",
@@ -41,9 +110,26 @@ const WORKS_DATA = [
         position: "Junior Developer",
         companyLogo: "hmi.png",
         description:
-            "A great website is designed for all people by default. \
-            It needs to accommodate people using assistive technology,\
-            include high contrast and the copy must be written in plain language.",
+            "One of the two developers who built systems internally for the company.",
+        tasks: [
+            {
+                // HMI Website
+                projectType: "Interactive Website",
+                role: "Full stack Developer",
+                responsibilities: [
+                    "One of the two developers who built the official website for the company.",
+                    "Developed additional features that requested by management",
+                ],
+                tech_stack: ["Vue", "Vuex", "Vuetiy", "MySQL", "ExpressJS"],
+            },
+            {
+                // HMI CMS
+                projectType: "CMS",
+                role: "Full stack Developer",
+                responsibilities: ["Solely developed the cms for the website"],
+                tech_stack: ["Vue", "Vuex", "Vuetiy", "MySQL", "ExpressJS"],
+            },
+        ],
     },
 ];
 export default WORKS_DATA;

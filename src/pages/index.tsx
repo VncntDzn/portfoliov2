@@ -9,7 +9,7 @@ import { NextPageWithLayout } from "./_app";
 const Home: NextPageWithLayout = () => {
     return (
         <>
-            <LandingPage />
+           {/*  <LandingPage /> */}
             <AboutVincent />
             <Projects />
             {/* <ContactMe /> */}

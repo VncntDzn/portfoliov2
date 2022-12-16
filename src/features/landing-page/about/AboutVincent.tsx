@@ -1,6 +1,7 @@
 import EastIcon from "@mui/icons-material/East";
 import { Box, Grid, Typography } from "@mui/material";
 import MyPic from "assets/pic.jpg";
+import Details from "features/about/introduction/components/Details";
 import { motion } from "framer-motion";
 import { EASE_OUT_TRANSITION } from "helpers";
 import Image from "next/image";
@@ -33,6 +34,8 @@ const AboutVincent = () => {
                 sx={{
                     marginTop: { xs: 3, md: 5, lg: 10 },
                     gap: { xs: 1, md: 0 },
+                    display: "flex",
+                    alignItems: "flex-start",
                 }}
             >
                 <Grid
@@ -77,7 +80,6 @@ const AboutVincent = () => {
                     item
                     container
                     lg={6}
-                    sx={{ marginTop: { xs: 5 }, height: "fit-content" }}
                     component={motion.div}
                     initial={{ opacity: 0, x: "10rem" }}
                     whileInView={{
@@ -87,7 +89,17 @@ const AboutVincent = () => {
                     }}
                     transition={EASE_OUT_TRANSITION}
                 >
-                    <Typography
+                    <Box
+                        display="flex"
+                   
+                        flexDirection={"column"}
+                        sx={{
+                            alignItems: { xs: "center", lg: "flex-start" },
+                        }}
+                    >
+                        <Details />
+                    </Box>
+                    {/*   <Typography
                         sx={{
                             lineHeight: "2rem",
                             height: "fit-content",
@@ -106,7 +118,7 @@ const AboutVincent = () => {
                         and muralist! As a Bay Area native, I am based in San
                         Francisco. My favorite corner of the internet is the
                         Creative Cuties Discord that my friend Amy and I co-run!
-                    </Typography>
+                    </Typography> */}
 
                     <Box
                         component={motion.div}
