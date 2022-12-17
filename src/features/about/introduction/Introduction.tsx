@@ -10,7 +10,7 @@ const Introduction = () => {
             container
             direction="row"
             sx={{
-                marginTop: { xs: 3, md: 5, lg: 10 },
+                marginY: { xs: 3, md: 5 },
                 gap: { xs: 1, md: 0 },
             }}
         >
