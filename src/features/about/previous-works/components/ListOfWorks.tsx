@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { WORKS_DATA } from "../../data";
+import { ListOfWorksType } from "../types";
 import TaskList from "./TaskList";
 
 const container = {
@@ -37,10 +38,9 @@ const ListOfWorks = () => {
                     title,
                     workDate,
                     position,
-                    description,
                     companyLogo,
                     tasks,
-                }) => (
+                }: ListOfWorksType) => (
                     <Box
                         key={title}
                         display="flex"
@@ -51,7 +51,6 @@ const ListOfWorks = () => {
                             flexDirection: { xs: "column", sm: "row" },
                             alignItems: { xs: "center", sm: "flex-start" },
                             gap: { xs: 2 },
-                        
                         }}
                         component={motion.div}
                         variants={item}

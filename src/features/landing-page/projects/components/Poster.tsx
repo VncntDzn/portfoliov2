@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { Box, Grid, Typography } from "@mui/material";
-import Description from "./Description";
-import { useAnimation, motion } from "framer-motion";
+import { Box } from "@mui/material";
 import Creativ from "assets/projects/creativ.jpeg";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import Description from "./Description";
 
 const FeaturedProject = ({ show }) => {
     const controls2 = useAnimation();

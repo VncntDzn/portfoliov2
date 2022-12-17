@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { Box, Divider, Grid, Icon, Typography } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Box, Grid, Icon, Typography } from "@mui/material";
 import Creativ from "assets/projects/creativ.jpeg";
 import Image from "next/image";
 import {
-    CarouselProvider,
-    Slider,
-    Slide,
     ButtonBack,
     ButtonNext,
+    CarouselProvider,
+    Slide,
+    Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Description from "./Description";
 const BUTTON_STYLE = {
     background: "none",
@@ -27,7 +26,7 @@ const HEADER_FONT_STYLE = {
     md: 30,
     lg: 32,
 };
-const FeaturedCarousel = props => {
+const FeaturedCarousel = () => {
     const DATA = [
         {
             image: Creativ,

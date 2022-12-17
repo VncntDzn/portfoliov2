@@ -1,6 +1,10 @@
 import { Box, Typography } from "@mui/material";
+import { TaskTypes } from "../types";
 
-const TaskList = ({ tasks }) => {
+interface TaskListProps {
+    tasks: TaskTypes[];
+}
+const TaskList = ({ tasks }: TaskListProps) => {
     return (
         <Box>
             {tasks.map(

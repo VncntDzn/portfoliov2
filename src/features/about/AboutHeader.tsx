@@ -1,11 +1,13 @@
 import WestIcon from "@mui/icons-material/West";
 import { Box, Button, Divider, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 
 const AboutHeader = () => {
+    const router = useRouter();
     return (
         <>
             <Box
-                display="flex"
+                display={router.pathname === "/" ? "none" : "flex"}
                 alignSelf="center"
                 gap={1}
                 width="fit-content"

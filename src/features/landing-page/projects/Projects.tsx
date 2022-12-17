@@ -18,11 +18,8 @@ const Projects = () => {
     }, [smMatch]);
     return (
         <Box
-            height="100vh"
             sx={{
                 backgroundColor: "#F4F4F4",
-                paddingX: { xs: 5, md: 20, lg: 23 },
-                paddingY: { xs: 2, md: 5 },
             }}
         >
             <Box>
