@@ -1,5 +1,6 @@
 import WestIcon from "@mui/icons-material/West";
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { SectionTitle } from "common";
 import { useRouter } from "next/router";
 
 const AboutHeader = () => {
@@ -25,14 +26,7 @@ const AboutHeader = () => {
                 </Typography>
             </Box>
 
-            <Typography
-                sx={{
-                    fontSize: { xs: 35, lg: 55 },
-                }}
-            >
-                About Vincent
-            </Typography>
-            <Divider sx={{ borderBottomWidth: "2px" }} />
+            <SectionTitle title="About Vincent" />
         </>
     );
 };

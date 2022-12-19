@@ -1,10 +1,11 @@
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import PageContainer from "layouts/PageContainer";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
+import WestIcon from "@mui/icons-material/West";
 const FeaturedProject: NextPageWithLayout = () => {
     const router = useRouter();
 
@@ -12,26 +13,22 @@ const FeaturedProject: NextPageWithLayout = () => {
         router.push("/");
     };
     return (
-        <Box
-            sx={{
-                paddingX: { xs: 5, md: 20, lg: 23 },
-                paddingY: { xs: 2, md: 5 },
-            }}
-        >
-            <Box display="flex" alignItems="center">
-                <IconButton size="small" onClick={handleNavigateToHome}>
-                    <KeyboardBackspaceIcon
-                        sx={{
-                            color: "#8d8d8d",
-                        }}
-                    />
-                </IconButton>
+        <Box>
+            <Box
+                onClick={handleNavigateToHome}
+                display={router.pathname === "/" ? "none" : "flex"}
+                alignSelf="center"
+                gap={1}
+                width="fit-content"
+                component={Button}
+                href="/"
+            >
+                <WestIcon htmlColor="#8d8d8d" />
                 <Typography
-                    sx={{
-                        fontSize: { xs: 13 },
-                        textTransform: "uppercase",
-                        color: "#8d8d8d",
-                    }}
+                    textTransform="uppercase"
+                    fontWeight={500}
+                    color="#8d8d8d"
+                    fontSize={14}
                 >
                     Return to Home
                 </Typography>
@@ -146,7 +143,7 @@ const FeaturedProject: NextPageWithLayout = () => {
                 sx={{
                     marginTop: { xs: 3, md: 5, lg: 10 },
                     gap: { xs: 1, md: 0 },
-                    paddingX: { xs: 5, md: 10, },
+                    paddingX: { xs: 5, md: 10 },
                     paddingY: { xs: 2, md: 5 },
 
                     backgroundColor: "#F4F4F4",
@@ -244,7 +241,11 @@ const FeaturedProject: NextPageWithLayout = () => {
 };
 
 FeaturedProject.getLayout = function getLayout(page: ReactNode) {
-    return <PageContainer title="My Project" description="My portfolio">{page}</PageContainer>;
+    return (
+        <PageContainer title="My Project" description="My portfolio">
+            {page}
+        </PageContainer>
+    );
 };
 
 export default FeaturedProject;

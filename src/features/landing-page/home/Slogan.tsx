@@ -1,24 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { EASE_OUT_TRANSITION } from "helpers";
-
-const TEN_PERCENT = "10%";
-const TEXT_TITLE_ANIMATION = {
-    TEXT_ANIMATION: {
-        x: "8%",
-    },
-    TEXT_INITIAL_ANIMATION: {
-        x: "-110%",
-    },
-};
-const TEXT_SUBTITLE_ANIMATION = {
-    TEXT_ANIMATION: {
-        x: TEN_PERCENT,
-    },
-    TEXT_INITIAL_ANIMATION: {
-        x: "110%",
-    },
-};
+ 
 const Slogan = () => {
     return (
         <>
@@ -27,10 +10,15 @@ const Slogan = () => {
                 alignItems="center"
                 gap={1}
                 component={motion.div}
-                variants={TEXT_TITLE_ANIMATION}
                 transition={EASE_OUT_TRANSITION}
-                initial="TEXT_INITIAL_ANIMATION"
-                whileInView="TEXT_ANIMATION"
+                initial={{
+                    x: "-10%",
+                    opacity: 0,
+                }}
+                whileInView={{
+                    x: "8%",
+                    opacity: 1,
+                }}
                 whileHover={{
                     x: "-2%",
                 }}
@@ -60,10 +48,15 @@ const Slogan = () => {
                 flexDirection="column"
                 alignItems={"flex-start"}
                 component={motion.div}
-                variants={TEXT_SUBTITLE_ANIMATION}
                 transition={EASE_OUT_TRANSITION}
-                initial="TEXT_INITIAL_ANIMATION"
-                whileInView="TEXT_ANIMATION"
+                initial={{
+                    x: "20%",
+                    opacity: 0,
+                }}
+                whileInView={{
+                    x: "8%",
+                    opacity: 1,
+                }}
                 zIndex={1}
                 sx={{
                     width: { xs: "95%", sm: "90%", lg: "100%" },
@@ -77,7 +70,7 @@ const Slogan = () => {
                     component={motion.div}
                     transition={EASE_OUT_TRANSITION}
                     whileHover={{
-                        x: TEN_PERCENT,
+                        x: "10%",
                     }}
                 >
                     <Divider

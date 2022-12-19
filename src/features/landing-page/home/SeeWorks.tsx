@@ -36,6 +36,7 @@ const SeeWorks = () => {
             transition={{
                 ease: "easeInOut",
                 duration: 0.5,
+                delay: 1
             }}
             sx={{
                 backgroundColor: "#1d1d1d",

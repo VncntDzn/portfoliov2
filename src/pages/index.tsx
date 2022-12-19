@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
 import { AboutHeader, Introduction as AboutIntroduction } from "features/about";
 import LandingPage from "features/landing-page/LandingPage";
-import Projects from "features/landing-page/projects/Projects";
 import Head from "next/head";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
-
+import Projects from "features/projects";
 const Home: NextPageWithLayout = () => {
     return (
         <>

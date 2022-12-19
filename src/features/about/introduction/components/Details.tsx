@@ -1,4 +1,3 @@
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Box, Typography } from "@mui/material";
 import { KnowMore } from "common";
 
