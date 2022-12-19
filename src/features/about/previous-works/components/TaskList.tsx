@@ -13,9 +13,9 @@ const TaskList = ({ tasks }: TaskListProps) => {
                         <Typography>
                             {projectType} - {role}
                         </Typography>
+                        <Typography variant="caption" fontWeight={700}>Tech Stack: </Typography>
                         <Typography variant="caption">
-                            Tech Stack:
-                            {tech_stack.join(", ")}
+                            {tech_stack.join(" / ")}
                         </Typography>
                         <Box component="ul">
                             {responsibilities.map((responsibility, i) => (

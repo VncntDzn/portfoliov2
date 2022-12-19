@@ -18,14 +18,12 @@ const AnimatedButton = ({ title, path }: AnimatedButtonProps) => {
             onClick={handleNavigation}
             component={motion.div}
             whileHover={{
-                width: 138,
+                width: "100%",
                 height: 50,
                 borderRadius: "10px",
             }}
             transition={{
-                ease: "easeIn",
-                duration: 1,
-                bounce: 0.5,
+                ease: "easeOut",
             }}
             sx={{
                 backgroundColor: "#e1e1e1",

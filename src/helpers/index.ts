@@ -1,1 +1,1 @@
-export const EASE_OUT_TRANSITION = { ease: "easeOut", duration: 2 };
+export const EASE_OUT_TRANSITION = { ease: "easeOut", duration: 1.5 };
