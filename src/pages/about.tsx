@@ -1,5 +1,5 @@
 import { AboutHeader, Introduction, PreviousWorks } from "features/about";
-import PageContainer from "layouts/PageContainer";
+import { PageContainer } from "layouts";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
 

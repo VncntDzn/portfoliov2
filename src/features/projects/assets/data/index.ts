@@ -7,7 +7,7 @@ const DATA = [
                 task: "To create a portfolio showing my featured projects.",
                 solution:
                     "Design and develop a static website that showcases my featured projects and skills",
-                techStack: [
+                tech_stack: [
                     "NextJS",
                     "Typescript",
                     "Framer Motion",
@@ -25,7 +25,7 @@ const DATA = [
                 task: "To create a portfolio showing my featured projects.",
                 solution:
                     "Design and develop a static website that showcases my featured projects and skills",
-                techStack: [
+                tech_stack: [
                     "NextJS",
                     "Typescript",
                     "Framer Motion",
@@ -43,7 +43,7 @@ const DATA = [
                 task: "To create a portfolio showing my featured projects.",
                 solution:
                     "Design and develop a static website that showcases my featured projects and skills",
-                techStack: [
+                tech_stack: [
                     "NextJS",
                     "Typescript",
                     "Framer Motion",
@@ -58,15 +58,15 @@ const DATA = [
         image: "",
         details: [
             {
-                task: "To create a portfolio showing my featured projects.",
+                task: "To create an interactive website where members can browse accredited clinics, hospitals and doctors.",
                 solution:
-                    "Design and develop a static website that showcases my featured projects and skills",
-                techStack: [
-                    "NextJS",
-                    "Typescript",
-                    "Framer Motion",
-                    "Material UI",
-                    "Docker",
+                    "Design and develop a full stack website that can be use by members to browse their accredited HMO partners.",
+                tech_stack: [
+                    "Vue",
+                    "Javascript",
+                    "Vuetify",
+                    "ExpressJS",
+                    "MySQL",
                 ],
             },
         ],

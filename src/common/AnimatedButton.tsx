@@ -2,11 +2,16 @@ import EastIcon from "@mui/icons-material/East";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-const KnowMore = () => {
+
+interface AnimatedButtonProps {
+    title: string;
+    path: string;
+}
+const AnimatedButton = ({ title, path }: AnimatedButtonProps) => {
     const router = useRouter();
 
     const handleNavigation = () => {
-        router.push("/about");
+        router.push(path);
     };
     return (
         <Box
@@ -54,10 +59,10 @@ const KnowMore = () => {
                     position: { lg: "absolute" },
                 }}
             >
-                Know more <EastIcon />
+                {title} <EastIcon />
             </Typography>
         </Box>
     );
 };
 
-export default KnowMore;
+export default AnimatedButton;

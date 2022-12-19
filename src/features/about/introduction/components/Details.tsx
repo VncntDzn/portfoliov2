@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { KnowMore } from "common";
+import { AnimatedButton } from "common";
 
 const Details = () => {
     return (
@@ -37,7 +37,7 @@ const Details = () => {
                 On my free time, I always go on a road trip using my motorcycle
                 and discover places and delicious foods around the Philippines.
             </Typography>
-            <KnowMore />
+            <AnimatedButton title="Know More" path="/about" />
         </Box>
     );
 };

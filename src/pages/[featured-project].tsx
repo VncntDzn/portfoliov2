@@ -1,7 +1,7 @@
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import PageContainer from "layouts/PageContainer";
+import { PageContainer } from "layouts";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";

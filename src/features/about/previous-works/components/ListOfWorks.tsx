@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
+import { WORKS_DATA } from "features/about/assets/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { WORKS_DATA } from "../../data";
 import { ListOfWorksType } from "../types";
 import TaskList from "./TaskList";
 
@@ -65,9 +65,9 @@ const ListOfWorks = () => {
                             }}
                         >
                             <Image
-                                src={require(`../../assets/${companyLogo}`)}
+                                src={require(`../../assets/images/${companyLogo}`)}
                                 layout="fill"
-                                alt="Cognizant"
+                                alt={title}
                                 objectFit="contain"
                             />
                         </Box>
