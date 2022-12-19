@@ -1,15 +1,11 @@
 import WestIcon from "@mui/icons-material/West";
 import { Box, Button, Typography } from "@mui/material";
 import { useRouter } from "next/router";
-const SelectedProjectHeader = () => {
-    const router = useRouter();
 
-    const handleNavigateToHome = () => {
-        router.push("/");
-    };
+const ReturnToHome = () => {
+    const router = useRouter();
     return (
         <Box
-            onClick={handleNavigateToHome}
             display={router.pathname === "/" ? "none" : "flex"}
             alignSelf="center"
             gap={1}
@@ -30,4 +26,4 @@ const SelectedProjectHeader = () => {
     );
 };
 
-export default SelectedProjectHeader;
+export default ReturnToHome;

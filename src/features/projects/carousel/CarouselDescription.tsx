@@ -43,7 +43,11 @@ const CarouselDescription = () => {
                     essentially unchanged.
                 </Typography>
             </Box>
-            <AnimatedButton title="View Project" path="/featured-project" />
+            <AnimatedButton
+                title="View Project"
+                path="/featured-project"
+                width={150}
+            />
         </Grid>
     );
 };

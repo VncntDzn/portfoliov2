@@ -1,21 +1,22 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import MyPic from "assets/pic.jpg";
-import { SectionTitle } from "common";
+import { ReturnToHome, SectionTitle } from "common";
 import SelectedProjectDescription from "features/projects/selected-project/SelectedProjectDescription";
-import SelectedProjectHeader from "features/projects/selected-project/SelectedProjectHeader";
 import { motion } from "framer-motion";
+import { PageContainer } from "layouts";
 import Image from "next/image";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
 const FeaturedProject: NextPageWithLayout = () => {
     return (
         <>
-            <Box sx={{ padding: { xs: "1rem 1rem", md: "2rem 10rem" } }}>
-                <SelectedProjectHeader />
+            <Box>
+                <ReturnToHome />
                 <SectionTitle title="My Project" />
                 <SelectedProjectDescription />
             </Box>
             <Box
+                marginX={-20}
                 bgcolor="#F4F4F4"
                 sx={{ padding: { xs: "1rem 1rem", md: "5rem 10rem" } }}
             >
@@ -47,7 +48,11 @@ const FeaturedProject: NextPageWithLayout = () => {
 };
 
 FeaturedProject.getLayout = function getLayout(page: ReactNode) {
-    return <>{page}</>;
+    return (
+        <PageContainer title="My Project" description="Showcase of my projects">
+            {page}
+        </PageContainer>
+    );
 };
 
 export default FeaturedProject;

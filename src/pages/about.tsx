@@ -1,4 +1,5 @@
-import { AboutHeader, Introduction, PreviousWorks } from "features/about";
+import { ReturnToHome, SectionTitle } from "common";
+import { Introduction, PreviousWorks } from "features/about";
 import { PageContainer } from "layouts";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
@@ -6,7 +7,8 @@ import { NextPageWithLayout } from "./_app";
 const AboutVincent: NextPageWithLayout = () => {
     return (
         <>
-            <AboutHeader />
+            <ReturnToHome />
+            <SectionTitle title="About Vincent" />
             <Introduction />
             <PreviousWorks />
         </>

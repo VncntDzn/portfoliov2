@@ -6,8 +6,9 @@ import { useRouter } from "next/router";
 interface AnimatedButtonProps {
     title: string;
     path: string;
+    width: number | string;
 }
-const AnimatedButton = ({ title, path }: AnimatedButtonProps) => {
+const AnimatedButton = ({ title, path, width }: AnimatedButtonProps) => {
     const router = useRouter();
 
     const handleNavigation = () => {
@@ -18,7 +19,7 @@ const AnimatedButton = ({ title, path }: AnimatedButtonProps) => {
             onClick={handleNavigation}
             component={motion.div}
             whileHover={{
-                width: "100%",
+                width,
                 height: 50,
                 borderRadius: "10px",
             }}

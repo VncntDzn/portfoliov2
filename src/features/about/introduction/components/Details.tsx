@@ -37,7 +37,7 @@ const Details = () => {
                 On my free time, I always go on a road trip using my motorcycle
                 and discover places and delicious foods around the Philippines.
             </Typography>
-            <AnimatedButton title="Know More" path="/about" />
+            <AnimatedButton title="Know More" path="/about" width={130} />
         </Box>
     );
 };
