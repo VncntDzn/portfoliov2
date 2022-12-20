@@ -1,4 +1,3 @@
-import Footer from "components/Footer";
 import { About } from "features/about";
 import LandingPage from "features/landing-page/LandingPage";
 import { Projects } from "features/projects";
@@ -6,6 +5,7 @@ import Head from "next/head";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
 import Contact from "features/contact";
+import { Footer } from "layouts";
 const Home: NextPageWithLayout = () => {
     return (
         <>

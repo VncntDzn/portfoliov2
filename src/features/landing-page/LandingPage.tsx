@@ -1,5 +1,4 @@
 import { Box, Divider } from "@mui/material";
-import Counter from "components/Counter";
 
 import Circle from "./home/Circle";
 import ScrollArrow from "./home/ScrollArrow";
@@ -38,7 +37,6 @@ const LandingPage = () => {
             <SocialLinks />
             <ScrollArrow />
             <Circle />
-            <Counter count={1} />
             <Divider
                 flexItem
                 sx={{

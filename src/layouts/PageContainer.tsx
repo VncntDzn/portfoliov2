@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import Footer from "components/Footer";
 import Head from "next/head";
 import { ReactNode } from "react";
+import Footer from "./Footer";
 
 type PageProps = {
     children: ReactNode;
