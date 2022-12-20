@@ -9,7 +9,11 @@ interface AboutProps {
 const About = ({ isPaddedContent }: AboutProps) => {
     return (
         <AnimatedLayout isPadded={isPaddedContent} isPrimaryColor={false}>
-            <Box>
+            <Box
+                sx={{
+                    padding: { sm: "2rem 5rem", md: 0 },
+                }}
+            >
                 <SectionTitle title="About Vincent" />
                 <Box
                     display="flex"

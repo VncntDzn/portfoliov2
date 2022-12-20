@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { AnimatedButton } from "common";
 const ProjectDescription = () => {
     return (
-        <>
+        <Box sx={{ mt: { xs: 5 }, mb: { xs: 5, lg: 15 } }}>
             <Typography>
                 Social Gen is a simple social media site inspired by
                 facebook/instagram. It is a rebranding of an old project called
@@ -17,7 +17,7 @@ const ProjectDescription = () => {
                 HTML5/ CSS3/ JavaScript/ Tailwind CSS/ React JS/ Redux/
             </Typography>
             <AnimatedButton title="Visit Live Version" width={175} path="/" />
-        </>
+        </Box>
     );
 };
 

@@ -10,7 +10,7 @@ const Home: NextPageWithLayout = () => {
         <>
             <LandingPage />
             <About isPaddedContent />
-            <Projects />
+            <Projects isPaddedContent isPrimaryColorContent />
         </>
     );
 };

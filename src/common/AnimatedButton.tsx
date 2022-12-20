@@ -54,7 +54,7 @@ const AnimatedButton = ({ title, path, width }: AnimatedButtonProps) => {
                     display: "flex",
                     alignItems: "center",
 
-                    width: { xs: 150, lg: 200 },
+                    width: { xs: 200, lg: 200 },
                     position: { lg: "absolute" },
                 }}
             >

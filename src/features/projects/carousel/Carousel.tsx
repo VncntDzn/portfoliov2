@@ -63,6 +63,7 @@ const Carousel = () => {
                                 spacing={3}
                                 sx={{
                                     padding: 1,
+                                    marginTop: { xs: 10, sm: 0 },
                                 }}
                             >
                                 <CarouselImage image={image} />
