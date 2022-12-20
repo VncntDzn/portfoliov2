@@ -2,48 +2,47 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
+const NAV_LINKS = [
+    {
+        name: "Home",
+        route: "",
+    },
+    {
+        name: "About",
+        route: "",
+    },
+    {
+        name: "Projects",
+        route: "",
+    },
+    {
+        name: "Contact",
+        route: "",
+    },
+];
+const SOCIAL_LINKS = [
+    {
+        name: "LinkedIn",
+        link: "",
+        icon: <GitHubIcon />,
+    },
+    {
+        name: "Github",
+        link: "",
+        icon: <LinkedInIcon />,
+    },
+    {
+        name: "Instagram",
+        link: "",
+        icon: <InstagramIcon />,
+    },
+];
 const Footer = () => {
-    const NAV_LINKS = [
-        {
-            name: "Home",
-            route: "",
-        },
-        {
-            name: "About Me",
-            route: "",
-        },
-        {
-            name: "Projects",
-            route: "",
-        },
-        {
-            name: "Skills",
-            route: "",
-        },
-    ];
-    const SOCIAL_LINKS = [
-        {
-            name: "LinkedIn",
-            link: "",
-            icon: <GitHubIcon />,
-        },
-        {
-            name: "Github",
-            link: "",
-            icon: <LinkedInIcon />,
-        },
-        {
-            name: "Instagram",
-            link: "",
-            icon: <InstagramIcon />,
-        },
-    ];
     return (
         <Box
             sx={{
                 backgroundColor: "#1d1d1d",
-
-                paddingX: { xs: 5, lg: 35, xl: 55 },
+                paddingX: { xs: 5, lg: 35, xl: 40 },
                 paddingY: { xs: 5, lg: 10 },
             }}
         >
@@ -56,23 +55,10 @@ const Footer = () => {
                 <Grid
                     item
                     container
-                    flexDirection="column"
-                    justifyContent="flex-start"
-                    lg={3}
-                    sm={3}
-                >
-                    <Typography color="white" variant="h6">
-                        Vincent Dizon
-                    </Typography>
-                    <Typography color="white">Sign in</Typography>
-                </Grid>
-                <Grid
-                    item
-                    container
                     justifyContent="space-evenly"
                     direction="row"
                     lg={6}
-                    sm={4}
+                    sm={6}
                 >
                     {NAV_LINKS.map(({ name }) => (
                         <Typography textAlign="center" key={name} color="white">
@@ -85,8 +71,8 @@ const Footer = () => {
                     container
                     justifyContent="space-evenly"
                     direction="row"
-                    lg={3}
-                    sm={3}
+                    lg={6}
+                    sm={6}
                 >
                     {SOCIAL_LINKS.map(({ name, icon }) => (
                         <IconButton

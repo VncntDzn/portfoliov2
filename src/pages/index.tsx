@@ -5,12 +5,14 @@ import { Projects } from "features/projects";
 import Head from "next/head";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
+import Contact from "features/contact";
 const Home: NextPageWithLayout = () => {
     return (
         <>
             <LandingPage />
             <About isPaddedContent />
             <Projects isPaddedContent isPrimaryColorContent />
+            <Contact />
         </>
     );
 };
