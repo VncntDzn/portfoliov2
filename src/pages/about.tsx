@@ -1,5 +1,5 @@
-import { ReturnToHome, SectionTitle } from "common";
-import { Introduction, PreviousWorks } from "features/about";
+import { ReturnToHome } from "common";
+import { About, PreviousWorks } from "features/about";
 import { PageContainer } from "layouts";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
@@ -8,8 +8,7 @@ const AboutVincent: NextPageWithLayout = () => {
     return (
         <>
             <ReturnToHome />
-            <SectionTitle title="About Vincent" />
-            <Introduction />
+            <About isPaddedContent={false} />
             <PreviousWorks />
         </>
     );

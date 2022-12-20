@@ -12,12 +12,17 @@ const HEADER_FONT_STYLE = {
 };
 const CarouselActions = ({ children }: ChildrenType) => {
     return (
-        <Box display="flex" justifyContent="space-between">
+        <Box
+            display="flex"
+            gap={1}
+            justifyContent="space-between"
+            alignItems="center"
+            marginY={2}
+        >
             <Typography alignSelf="center" fontSize={HEADER_FONT_STYLE}>
                 hehe
             </Typography>
             <Box
-                marginTop={2}
                 display="flex"
                 justifyContent="space-evenly"
                 alignItems="center"

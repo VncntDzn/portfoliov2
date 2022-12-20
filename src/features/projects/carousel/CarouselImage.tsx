@@ -3,7 +3,14 @@ import Image from "next/image";
 
 const CarouselImage = ({ image }) => {
     return (
-        <Grid item sm={6} lg={6} container justifyContent="center">
+        <Grid
+            item
+            sm={6}
+            lg={6}
+            container
+            justifyContent="center"
+            /*  sx={{ border: "3px solid red" }} */
+        >
             <Box
                 position="relative"
                 sx={{
@@ -13,13 +20,13 @@ const CarouselImage = ({ image }) => {
                         xs: "30vh",
                         sm: "20vh",
                         md: "45vh",
+                        lg: "60vh",
                     },
                     width: {
                         xs: "100%",
                         sm: "95%",
                         lg: "100%",
                     },
-                    boxShadow: `0 4px 8px 0 rgba(0,0,0,0.2)`,
                 }}
             >
                 <Image src={image.src} quality={100} layout="fill" alt={"sd"} />

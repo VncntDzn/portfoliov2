@@ -11,7 +11,7 @@ const container = {
         opacity: 1,
         // calculates children gap for animation
         transition: {
-            staggerChildren: 0.8,
+            staggerChildren: 1,
         },
     },
 };
