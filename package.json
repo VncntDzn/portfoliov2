@@ -23,7 +23,8 @@
         "npm": "^8.15.0",
         "pure-react-carousel": "^1.28.1",
         "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "react-dom": "18.2.0",
+        "react-player": "^2.11.0"
     },
     "devDependencies": {
         "@svgr/webpack": "^6.2.1",

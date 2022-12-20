@@ -4,8 +4,8 @@ import LandingPage from "features/landing-page/LandingPage";
 import Head from "next/head";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
-import Projects from "features/projects";
 import { SectionTitle } from "common";
+import { Projects } from "features/projects";
 const Home: NextPageWithLayout = () => {
     return (
         <>
