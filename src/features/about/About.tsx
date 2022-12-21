@@ -10,6 +10,7 @@ const About = ({ isPaddedContent }: AboutProps) => {
     return (
         <AnimatedLayout isPadded={isPaddedContent} isPrimaryColor={false}>
             <Box
+                id="about"
                 sx={{
                     padding: { sm: "2rem 5rem", md: 0 },
                 }}
@@ -18,10 +19,10 @@ const About = ({ isPaddedContent }: AboutProps) => {
                 <Box
                     display="flex"
                     gap={5}
-                    marginY={2}
                     alignItems="center"
                     sx={{
                         flexDirection: { xs: "column", md: "row" },
+                        my: { xs: 2, md: 10 },
                     }}
                 >
                     <Photo />

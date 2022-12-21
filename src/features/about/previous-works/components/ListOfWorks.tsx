@@ -47,10 +47,10 @@ const ListOfWorks = () => {
                         justifyContent="space-between"
                         alignItems="center"
                         mt={3}
+                        gap={2}
                         sx={{
                             flexDirection: { xs: "column", sm: "row" },
                             alignItems: { xs: "center", sm: "flex-start" },
-                            gap: { xs: 2 },
                         }}
                         component={motion.div}
                         variants={item}
@@ -58,8 +58,8 @@ const ListOfWorks = () => {
                         <Box
                             flex="20%"
                             height={150}
+                            position="relative"
                             sx={{
-                                position: "relative",
                                 cursor: "not-allowed",
                                 width: { xs: 150, md: 200 },
                             }}

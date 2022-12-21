@@ -1,5 +1,5 @@
 import EastIcon from "@mui/icons-material/East";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -10,6 +10,7 @@ interface AnimatedButtonProps {
 }
 const AnimatedButton = ({ title, path, width }: AnimatedButtonProps) => {
     const router = useRouter();
+    const theme = useTheme();
 
     const handleNavigation = () => {
         router.push(path);
@@ -26,34 +27,29 @@ const AnimatedButton = ({ title, path, width }: AnimatedButtonProps) => {
             transition={{
                 ease: "easeOut",
             }}
-            sx={{
-                backgroundColor: "#e1e1e1",
-
-                borderRadius: "50%",
-                padding: "0.8rem",
-
-                marginTop: 1,
-                position: "relative",
-                height: 70,
-                width: 70,
-                display: router.pathname === "/about" ? "none" : "block",
-            }}
+            bgcolor={theme.palette.primary.light}
+            borderRadius="50%"
+            marginTop={1}
+            position="relative"
+            height={70}
+            width={70}
+            padding="0.8rem"
+            display={router.pathname === path ? "none" : "block"}
         >
             <Typography
                 component="strong"
+                fontSize={13}
+                textTransform="uppercase"
+                fontWeight={700}
+                display="flex"
+                alignItems="center"
+                color="#8d8d8d"
                 sx={{
-                    fontSize: { xs: 13 },
-                    textTransform: "uppercase",
-                    color: "#8d8d8d",
                     textIndent: 0,
                     cursor: "pointer",
-                    fontWeight: 700,
                     ":hover": {
                         color: "#1d1d1d",
                     },
-                    display: "flex",
-                    alignItems: "center",
-
                     width: { xs: 200, lg: 200 },
                     position: { lg: "absolute" },
                 }}

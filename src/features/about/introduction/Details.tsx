@@ -6,10 +6,10 @@ const Details = () => {
         <Box>
             <Typography color="#8d8d8d">HELLO THERE,</Typography>
             <Typography
+                fontWeight={700}
+                height="fit-content"
                 sx={{
-                    height: "fit-content",
                     fontSize: { xs: 25, lg: 40 },
-                    fontWeight: 700,
                 }}
             >
                 I'm Vincent P. Dizon

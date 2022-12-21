@@ -12,7 +12,7 @@ const Projects = ({ isPaddedContent, isPrimaryColorContent }: ProjectProps) => {
             isPadded={isPaddedContent}
             isPrimaryColor={isPrimaryColorContent}
         >
-            <Box display="flex" flexDirection="column">
+            <Box id="projects" display="flex" flexDirection="column">
                 <SectionTitle title="Featured Projects" />
                 <Carousel />
             </Box>

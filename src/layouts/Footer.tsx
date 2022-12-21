@@ -1,48 +1,13 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
-const NAV_LINKS = [
-    {
-        name: "Home",
-        route: "",
-    },
-    {
-        name: "About",
-        route: "",
-    },
-    {
-        name: "Projects",
-        route: "",
-    },
-    {
-        name: "Contact",
-        route: "",
-    },
-];
-const SOCIAL_LINKS = [
-    {
-        name: "LinkedIn",
-        link: "",
-        icon: <GitHubIcon />,
-    },
-    {
-        name: "Github",
-        link: "",
-        icon: <LinkedInIcon />,
-    },
-    {
-        name: "Instagram",
-        link: "",
-        icon: <InstagramIcon />,
-    },
-];
+import { NAV_LINKS, SOCIAL_LINKS } from "assets/data";
+import Link from "next/link";
+
 const Footer = () => {
     return (
         <Box
             sx={{
                 backgroundColor: "#1d1d1d",
-                paddingX: { xs: 5, lg: 35, xl: 40 },
+                paddingX: { xs: 5, lg: 35, xl: 50 },
                 paddingY: { xs: 5, lg: 10 },
             }}
         >
@@ -57,13 +22,22 @@ const Footer = () => {
                     container
                     justifyContent="space-evenly"
                     direction="row"
-                    lg={6}
-                    sm={6}
+                    lg={12}
+                    sm={12}
                 >
-                    {NAV_LINKS.map(({ name }) => (
-                        <Typography textAlign="center" key={name} color="white">
-                            {name}
-                        </Typography>
+                    {NAV_LINKS.map(({ name, path }) => (
+                        <Link key={name} href={path}>
+                            <Typography
+                                textAlign="center"
+                                key={name}
+                                color="white"
+                                sx={{
+                                    cursor: "pointer",
+                                }}
+                            >
+                                {name}
+                            </Typography>
+                        </Link>
                     ))}
                 </Grid>
                 <Grid
@@ -74,18 +48,19 @@ const Footer = () => {
                     lg={6}
                     sm={6}
                 >
-                    {SOCIAL_LINKS.map(({ name, icon }) => (
-                        <IconButton
-                            key={name}
-                            sx={{
-                                color: "white",
-                                ":hover": {
-                                    backgroundColor: "#090909",
-                                },
-                            }}
-                        >
-                            {icon}
-                        </IconButton>
+                    {SOCIAL_LINKS.map(({ name, icon, path }) => (
+                        <Link key={name} href={path}>
+                            <IconButton
+                                sx={{
+                                    color: "white",
+                                    ":hover": {
+                                        backgroundColor: "#090909",
+                                    },
+                                }}
+                            >
+                                {icon}
+                            </IconButton>
+                        </Link>
                     ))}
                 </Grid>
             </Grid>

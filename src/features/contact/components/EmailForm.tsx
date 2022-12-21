@@ -1,6 +1,7 @@
 import SendIcon from "@mui/icons-material/Send";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, useTheme } from "@mui/material";
 const EmailForm = () => {
+    const theme = useTheme();
     return (
         <Box sx={{ flex: "60%" }}>
             <TextField
@@ -19,29 +20,30 @@ const EmailForm = () => {
                 width="100%"
                 required
                 placeholder="Enter your message"
+                my={1}
+                borderRadius="3px"
+                padding="1rem"
+                fontSize="1rem"
+                fontFamily={`"Roboto","Helvetica","Arial",sans-serif`}
+                color="rgba(0, 0, 0, 0.87)"
                 sx={{
-                    borderRadius: "3px",
-                    my: 1,
-                    padding: "1rem",
-                    fontSize: "1rem",
-                    color: "rgba(0, 0, 0, 0.87)",
-                    fontFamily: `"Roboto","Helvetica","Arial",sans-serif`,
-
                     ":focus": {
                         outline: "1px solid blue",
                     },
                 }}
             />
-            <Button
+            <Box
+                component={Button}
                 variant="contained"
+                bgcolor={theme.palette.secondary.main}
                 sx={{
                     float: "right",
-                    backgroundColor: "#1d1d1d",
                 }}
+                color="white"
             >
                 Send Email &nbsp;
                 <SendIcon fontSize="small" />
-            </Button>
+            </Box>
         </Box>
     );
 };

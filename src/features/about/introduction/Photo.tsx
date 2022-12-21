@@ -7,9 +7,9 @@ const Photo = () => {
     return (
         <Box>
             <Box
+                borderRadius="20px"
+                boxShadow="-30px 30px 10px gray"
                 sx={{
-                    boxShadow: "-30px 30px 10px gray",
-                    borderRadius: "20px",
                     height: { xs: 250, lg: "fit-content" },
                     width: { xs: 250, lg: 500 },
                     cursor: "not-allowed",

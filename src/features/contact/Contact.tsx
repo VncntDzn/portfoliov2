@@ -7,7 +7,7 @@ import LottieComponent from "./components/LottieComponent";
 const Contact = () => {
     return (
         <AnimatedLayout isPadded isPrimaryColor={false}>
-            <Box width="100%" height="100vh">
+            <Box  id="contact" width="100%" height="100vh">
                 <SectionTitle title="Connect with Vincent" />
                 <Box
                     display="flex"

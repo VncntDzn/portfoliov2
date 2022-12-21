@@ -1,22 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { Fragment } from "react";
 
+import { SOCIAL_LINKS } from "assets/data";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const SocialLinks = () => {
-    const LINKS = [
-        {
-            name: "LinkedIn",
-            link: "",
-        },
-        {
-            name: "Github",
-            link: "",
-        },
-        {
-            name: "Blogs",
-            link: "",
-        },
-    ];
     return (
         <Box
             display="flex"
@@ -41,24 +29,26 @@ const SocialLinks = () => {
                 bottom: 100,
                 writingMode: "vertical-lr",
                 height: 250,
-                zIndex:1
+                zIndex: 1,
             }}
         >
-            {LINKS.map(({ name }) => (
+            {SOCIAL_LINKS.map(({ name, path }) => (
                 <Fragment key={name}>
-                    <Typography
-                        component={motion.p}
-                        color="#8c8c8c"
-                        whileHover={{
-                            color: "#1d1d1d",
-                            cursor: "pointer",
-                            letterSpacing: "2px",
-                            textDecoration: "underline",
-                        }}
-                    >
-                        {name}
-                    </Typography>
-                    {name !== "Blogs" && (
+                    <Link href={path}>
+                        <Typography
+                            component={motion.p}
+                            color="#8c8c8c"
+                            whileHover={{
+                                color: "#1d1d1d",
+                                cursor: "pointer",
+                                letterSpacing: "2px",
+                                textDecoration: "underline",
+                            }}
+                        >
+                            {name}
+                        </Typography>
+                    </Link>
+                    {name !== "Instagram" && (
                         <Typography color="#8c8c8c">/</Typography>
                     )}
                 </Fragment>

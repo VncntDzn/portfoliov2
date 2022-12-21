@@ -1,8 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 const ProjectDemo = () => {
+    const theme = useTheme();
     return (
         <Box
-            bgcolor="#F4F4F4"
+            bgcolor={theme.palette.primary.main}
             sx={{
                 padding: { xs: "1rem 1rem", sm: "3rem", md: "5rem 10rem" },
                 margin: {

@@ -1,9 +1,9 @@
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { AppProps } from "next/app";
 
 import type { NextPage } from "next";
 import type { ReactElement, ReactNode } from "react";
-
+import theme from "theme";
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     getLayout?: (page: ReactElement) => ReactNode;
@@ -17,7 +17,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     return getLayout(
         <>
             <CssBaseline />
-            <Component {...pageProps} />
+            <ThemeProvider theme={theme}>
+                <Component {...pageProps} />
+            </ThemeProvider>
         </>
     );
 }

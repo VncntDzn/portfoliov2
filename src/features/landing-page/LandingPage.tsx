@@ -1,12 +1,13 @@
-import { Box, Divider } from "@mui/material";
+import { Box, Divider, useTheme } from "@mui/material";
 
-import Circle from "./home/Circle";
-import ScrollArrow from "./home/ScrollArrow";
-import SeeWorks from "./home/SeeWorks";
-import Slogan from "./home/Slogan";
-import SocialLinks from "./home/SocialLinks";
+import Circle from "./components/Circle";
+import ScrollArrow from "./components/ScrollArrow";
+import SeeWorks from "./components/SeeWorks";
+import Slogan from "./components/Slogan";
+import SocialLinks from "./components/SocialLinks";
 
 const LandingPage = () => {
+    const theme = useTheme();
     return (
         <Box
             display="flex"
@@ -15,8 +16,8 @@ const LandingPage = () => {
             alignItems="center"
             position="relative"
             zIndex={1}
+            bgcolor={theme.palette.primary.main}
             sx={{
-                backgroundColor: "#F4F4F4",
                 height: { xs: "85vh", sm: "40vh", lg: "100vh" },
                 paddingX: { xs: 5, md: 20, lg: 30 },
             }}
