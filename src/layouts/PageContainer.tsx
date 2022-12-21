@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import Footer from "components/Footer";
 import Head from "next/head";
 import { ReactNode } from "react";
+import Footer from "./Footer";
 
 type PageProps = {
     children: ReactNode;
@@ -18,7 +18,7 @@ const PageContainer = ({
         <Box>
             <Head>
                 {title ? (
-                    <title>VD | {title}</title>
+                    <title>{`VD | ${title}`}</title>
                 ) : (
                     <title>Vincent Dizon</title>
                 )}
@@ -26,7 +26,14 @@ const PageContainer = ({
                 <meta name="description" content={description} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Box>{children}</Box>
+            <Box
+                sx={{
+                    paddingX: { xs: 5, md: 20 },
+                    paddingY: { xs: 2, md: 5 },
+                }}
+            >
+                {children}
+            </Box>
             <Footer />
         </Box>
     );

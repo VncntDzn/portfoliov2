@@ -1,25 +1,35 @@
-import AboutMe from "features/about-me";
-import ContactMe from "features/contact-me";
-import LandingPage from "features/landing-page";
-import Projects from "features/projects";
-import PageContainer from "layouts/PageContainer";
+import { About } from "features/about";
+import LandingPage from "features/landing-page/LandingPage";
+import { Projects } from "features/projects";
+import Head from "next/head";
 import { ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
-
+import Contact from "features/contact";
+import { Footer } from "layouts";
 const Home: NextPageWithLayout = () => {
     return (
         <>
             <LandingPage />
-            <AboutMe /> <Projects />
-            {/*    
-           
-            <ContactMe /> */}
+            <About isPaddedContent />
+            <Projects isPaddedContent isPrimaryColorContent />
+            <Contact />
         </>
     );
 };
 
 Home.getLayout = function getLayout(page: ReactNode) {
-    return <PageContainer description="My portfolio">{page}</PageContainer>;
+    return (
+        <main>
+            <Head>
+                <title>Vincent Dizon</title>
+
+                <meta name="description" content="My Portfolio" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            {page}
+            <Footer />
+        </main>
+    );
 };
 
 export default Home;
