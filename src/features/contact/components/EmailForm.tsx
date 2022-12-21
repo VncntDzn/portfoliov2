@@ -8,10 +8,10 @@ import {
     DialogActions,
     DialogContent,
     TextField,
-    useTheme
+    useTheme,
 } from "@mui/material";
 import axios from "axios";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 
 const EmailForm = () => {
     const theme = useTheme();
@@ -26,6 +26,12 @@ const EmailForm = () => {
         name: "",
         message: "",
     });
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+
+        setForm({ ...form, [name]: value });
+    };
     const handleSubmitEmail = async (e: any) => {
         e.preventDefault();
         setLoading(true);
@@ -66,45 +72,43 @@ const EmailForm = () => {
     }
 
     return (
-        <Box sx={{ flex: "60%" }}>
+        <Box flex="60%">
             <form onSubmit={handleSubmitEmail} method="post">
                 <TextField
-                    name="Full name"
+                    name="name"
                     placeholder="Full name"
                     required
                     fullWidth
                     type="text"
-                    onChange={e => setForm({ ...form, name: e.target.value })}
+                    onChange={handleOnChange}
                     sx={{
                         my: 1,
                     }}
                 />
                 <TextField
-                    name="Email"
+                    name="email"
                     placeholder="Email"
                     required
                     fullWidth
                     type="email"
-                    onChange={e => setForm({ ...form, email: e.target.value })}
+                    onChange={handleOnChange}
                     sx={{
                         my: 1,
                     }}
                 />
                 <TextField
-                    name="Subject"
+                    name="subject"
                     placeholder="Subject"
                     required
                     fullWidth
                     type="text"
-                    onChange={e =>
-                        setForm({ ...form, subject: e.target.value })
-                    }
+                    onChange={handleOnChange}
                     sx={{
                         my: 1,
                     }}
                 />
                 <Box
-                    name="Message"
+                    name="message"
                     component="textarea"
                     height={200}
                     width="100%"
@@ -116,9 +120,7 @@ const EmailForm = () => {
                     fontSize="1rem"
                     fontFamily={`"Roboto","Helvetica","Arial",sans-serif`}
                     color="rgba(0, 0, 0, 0.87)"
-                    onChange={e =>
-                        setForm({ ...form, message: e.target.value })
-                    }
+                    onChange={handleOnChange}
                     sx={{
                         ":focus": {
                             outline: "1px solid blue",

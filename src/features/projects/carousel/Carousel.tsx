@@ -7,7 +7,7 @@ import {
     ButtonNext,
     CarouselProvider,
     Slide,
-    Slider
+    Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import CarouselActions from "./CarouselActions";
@@ -60,9 +60,8 @@ const Carousel = () => {
 
                             <Grid
                                 container
-                                spacing={3}
+                                spacing={5}
                                 sx={{
-                                    padding: 1,
                                     marginTop: { xs: 10, sm: 0 },
                                 }}
                             >

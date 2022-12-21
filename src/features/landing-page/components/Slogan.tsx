@@ -1,8 +1,8 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { EASE_OUT_TRANSITION } from "helpers";
- 
-const Slogan = () => {
+
+const Slogan = ({ mediaQuery }: { mediaQuery: boolean }) => {
     return (
         <>
             <Box
@@ -16,7 +16,7 @@ const Slogan = () => {
                     opacity: 0,
                 }}
                 whileInView={{
-                    x: "8%",
+                    x: mediaQuery ? "10vw" : "5vw",
                     opacity: 1,
                 }}
                 whileHover={{
@@ -32,6 +32,7 @@ const Slogan = () => {
                     fontWeight={700}
                     sx={{
                         fontSize: { xs: 30, sm: 50, lg: 70, xl: 80 },
+                        textAlign: "center",
                     }}
                 >
                     Vincent Dizon
@@ -50,11 +51,11 @@ const Slogan = () => {
                 component={motion.div}
                 transition={EASE_OUT_TRANSITION}
                 initial={{
-                    x: "20%",
+                    x: "5vw",
                     opacity: 0,
                 }}
                 whileInView={{
-                    x: "8%",
+                    x: "10vw",
                     opacity: 1,
                 }}
                 zIndex={1}

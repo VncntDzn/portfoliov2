@@ -27,7 +27,7 @@ const CarouselDescription = () => {
                     sx={{
                         display: {
                             xs: "none",
-                            lg: "inline-block",
+                            sm: "inline-block",
                             textAlign: "justify",
                             textIndent: "2rem",
                             lineHeight: "2.2rem",
