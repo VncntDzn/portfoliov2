@@ -12,7 +12,7 @@ const Details = () => {
                     fontSize: { xs: 25, lg: 40 },
                 }}
             >
-                I'm Vincent P. Dizon
+                I&rsquo;m Vincent P. Dizon
             </Typography>
             <Typography
                 lineHeight={2}
@@ -22,9 +22,9 @@ const Details = () => {
                 }}
             >
                 A frontend developer based in the Philippines. Over the past 3
-                years and a half as a developer, I've built websites from
+                years and a half as a developer, I&rsquo;ve built websites from
                 simplest to the most complex designs for local and international
-                clients. Some of the websites that I've developed were on a team
+                clients. Some of the websites that I&rsquo;ve developed were on a team
                 or I developed it solely.
             </Typography>
             <Typography

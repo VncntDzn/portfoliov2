@@ -1,16 +1,11 @@
 import { Box, Grid } from "@mui/material";
-import Image from "next/image";
-
-const CarouselImage = ({ image }) => {
+import Image, { StaticImageData } from "next/image";
+interface CarouselImageProps {
+    image: StaticImageData;
+}
+const CarouselImage = ({ image }: CarouselImageProps) => {
     return (
-        <Grid
-            item
-            sm={6}
-            lg={6}
-            container
-            justifyContent="center"
-            /*  sx={{ border: "3px solid red" }} */
-        >
+        <Grid item sm={6} lg={6} container justifyContent="center">
             <Box
                 position="relative"
                 sx={{
@@ -20,7 +15,7 @@ const CarouselImage = ({ image }) => {
                         xs: "30vh",
                         sm: "20vh",
                         md: "45vh",
-                        lg: "60vh",
+                        lg: "50vh",
                     },
                     width: {
                         xs: "100%",

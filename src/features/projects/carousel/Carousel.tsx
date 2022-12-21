@@ -1,13 +1,13 @@
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Box, Grid, Icon } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Creativ from "assets/projects/creativ.jpeg";
 import {
     ButtonBack,
     ButtonNext,
     CarouselProvider,
     Slide,
-    Slider,
+    Slider
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import CarouselActions from "./CarouselActions";
