@@ -27,7 +27,7 @@ const LandingPage = () => {
                 flexItem
                 sx={{
                     display: { xs: "none", md: "flex" },
-                    height: { xs: "none", md: "70%", lg: "79%" },
+                    height: { xs: "none", md: "70%", lg: "79%", xl: "84%" },
                     position: "absolute",
                     left: "11%",
                 }}

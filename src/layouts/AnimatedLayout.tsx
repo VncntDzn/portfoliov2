@@ -21,7 +21,9 @@ const AnimatedLayout = ({
             bgcolor={isPrimaryColor ? theme.palette.primary.main : ""}
             sx={{
                 flexDirection: { xs: "column", md: "row" },
-                padding: isPadded ? { xs: "1rem 1rem", md: "2rem 10rem" } : {},
+                padding: isPadded
+                    ? { xs: "1rem 1rem", md: "2rem 10rem", xl: "2rem 15rem" }
+                    : {},
             }}
             component={motion.div}
             initial={{ opacity: 0, y: "20%" }}
