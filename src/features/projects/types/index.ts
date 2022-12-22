@@ -10,6 +10,8 @@ export interface ProjectType {
     id: string;
     title: string;
     image: StaticImageData;
+    path: string;
+    isFeatured: boolean;
     demo: string;
     description: string;
     details: DetailType[];

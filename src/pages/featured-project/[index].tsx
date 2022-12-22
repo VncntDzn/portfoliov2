@@ -4,7 +4,7 @@ import projects from "features/projects/assets/data";
 import { ProjectType } from "features/projects/types";
 import { PageContainer } from "layouts";
 import { useRouter } from "next/router";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NextPageWithLayout } from "../_app";
 
 const FeaturedProject: NextPageWithLayout = () => {
@@ -24,22 +24,18 @@ const FeaturedProject: NextPageWithLayout = () => {
 
     if (!selectedProject) return null;
     return (
-        <>
+        <PageContainer
+            title={selectedProject.title}
+            description={selectedProject.description}
+        >
             <ReturnToHome />
             <SectionTitle title={selectedProject.title} />
             <ProjectDescription
                 details={selectedProject.details}
                 description={selectedProject.description}
+                path={selectedProject.path}
             />
-            <ProjectDemo />
-        </>
-    );
-};
-
-FeaturedProject.getLayout = function getLayout(page: ReactNode) {
-    return (
-        <PageContainer title="My Project" description="Showcase of my projects">
-            {page}
+            <ProjectDemo demo={selectedProject.demo} />
         </PageContainer>
     );
 };

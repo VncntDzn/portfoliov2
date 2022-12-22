@@ -27,14 +27,14 @@ const CarouselDescription = ({ description, id }: CarouselDescriptionProps) => {
                 }}
             >
                 <Typography
+                    lineHeight={2}
+                    textAlign="justify"
                     sx={{
                         display: {
                             xs: "none",
                             sm: "inline-block",
-                            textAlign: "justify",
-                            textIndent: "2rem",
-                            lineHeight: "2.2rem",
                         },
+                        textIndent: "2rem",
                     }}
                 >
                     {description}

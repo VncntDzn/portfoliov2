@@ -11,7 +11,7 @@ const ReturnToHome = () => {
             gap={1}
             width="fit-content"
             component={Button}
-            href="/"
+            onClick={() => router.back()}
         >
             <WestIcon htmlColor="#8d8d8d" />
             <Typography
