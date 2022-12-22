@@ -1,7 +1,11 @@
-const DATA = [
+import Creativ from "assets/projects/creativ.jpeg";
+const projects = [
     {
+        id: "portfolio-v2-2022",
         title: "Portfolio",
-        image: "",
+        image: Creativ,
+        demo: "",
+        description: "",
         details: [
             {
                 task: "To create a portfolio showing my featured projects.",
@@ -18,8 +22,11 @@ const DATA = [
         ],
     },
     {
+        id: "wecare-v1-2021",
         title: "WeCare",
-        image: "",
+        image: Creativ,
+        demo: "",
+        description: "",
         details: [
             {
                 task: "To create a portfolio showing my featured projects.",
@@ -36,8 +43,11 @@ const DATA = [
         ],
     },
     {
+        id: "creativ-v1-2022",
         title: "CreatiV",
-        image: "",
+        image: Creativ,
+        demo: "",
+        description: "",
         details: [
             {
                 task: "To create a portfolio showing my featured projects.",
@@ -54,8 +64,11 @@ const DATA = [
         ],
     },
     {
+        id: "hmi-v1-2020",
         title: "HMI Website",
-        image: "",
+        image: Creativ,
+        demo: "",
+        description: "",
         details: [
             {
                 task: "To create an interactive website where members can browse accredited clinics, hospitals and doctors.",
@@ -72,4 +85,4 @@ const DATA = [
         ],
     },
 ];
-export default DATA;
+export default projects;

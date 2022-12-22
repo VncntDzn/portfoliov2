@@ -10,7 +10,7 @@ const HEADER_FONT_STYLE = {
     md: 30,
     lg: 32,
 };
-const CarouselActions = ({ children }: ChildrenType) => {
+const CarouselActions = ({ children, title }: CarouselActionsProps) => {
     return (
         <Box
             display="flex"
@@ -20,7 +20,7 @@ const CarouselActions = ({ children }: ChildrenType) => {
             marginY={2}
         >
             <Typography alignSelf="center" fontSize={HEADER_FONT_STYLE}>
-                hehe
+                {title}
             </Typography>
             <Box
                 display="flex"

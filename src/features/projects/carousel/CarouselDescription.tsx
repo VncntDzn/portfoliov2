@@ -1,7 +1,10 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { AnimatedButton } from "common";
-
-const CarouselDescription = () => {
+interface CarouselDescriptionProps {
+    description: string;
+    id: string;
+}
+const CarouselDescription = ({ description, id }: CarouselDescriptionProps) => {
     return (
         <Grid
             item
@@ -34,18 +37,12 @@ const CarouselDescription = () => {
                         },
                     }}
                 >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    {description}
                 </Typography>
             </Box>
             <AnimatedButton
                 title="View Project"
-                path="/featured-project"
+                path={`/featured-project/${id}`}
                 width={150}
             />
         </Grid>
