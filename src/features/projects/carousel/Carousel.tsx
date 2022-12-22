@@ -47,9 +47,9 @@ const Carousel = () => {
 
                             <Grid
                                 container
-                                spacing={5}
                                 sx={{
                                     marginTop: { xs: 10, sm: 0 },
+                                    gap: { xs: 0, lg: 5 },
                                 }}
                             >
                                 <CarouselImage image={image} />

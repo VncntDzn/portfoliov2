@@ -9,7 +9,7 @@ const CarouselDescription = ({ description, id }: CarouselDescriptionProps) => {
         <Grid
             item
             sm={6}
-            lg={6}
+            lg={5}
             container
             sx={{
                 marginTop: { xs: 5, sm: 0 },

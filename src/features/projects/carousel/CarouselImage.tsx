@@ -5,7 +5,7 @@ interface CarouselImageProps {
 }
 const CarouselImage = ({ image }: CarouselImageProps) => {
     return (
-        <Grid item sm={6} lg={6} container justifyContent="center">
+        <Grid item sm={6} lg={5} container justifyContent="center">
             <Box
                 position="relative"
                 sx={{
