@@ -1,5 +1,8 @@
 import { Box, useTheme } from "@mui/material";
-const ProjectDemo = () => {
+interface DemoProps {
+    demo: string;
+}
+const ProjectDemo = ({ demo }: DemoProps) => {
     const theme = useTheme();
     return (
         <Box
@@ -15,7 +18,7 @@ const ProjectDemo = () => {
             }}
         >
             <Box borderRadius="20px" component="video" controls width="100%">
-                <Box component="source" src="/demo/hmi.webm" />
+                <Box component="source" src={`/demo/${demo}`} />
             </Box>
         </Box>
     );

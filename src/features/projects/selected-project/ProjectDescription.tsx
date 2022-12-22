@@ -1,22 +1,61 @@
 import { Box, Typography } from "@mui/material";
 import { AnimatedButton } from "common";
-const ProjectDescription = () => {
+import { Fragment } from "react";
+import { DetailType } from "../types";
+interface ProjectDescriptionProps {
+    description: string;
+    details: DetailType[];
+    path: string;
+}
+const ProjectDescription = ({
+    description,
+    details,
+    path,
+}: ProjectDescriptionProps) => {
     return (
-        <Box sx={{ mt: { xs: 5 }, mb: { xs: 5, lg: 15 } }}>
-            <Typography>
-                Social Gen is a simple social media site inspired by
-                facebook/instagram. It is a rebranding of an old project called
-                'Foodie'. It has the basic functionality of a social media site
-                such as authentication, private messaging, notification, profile
-                customization and many more.
+        <Box sx={{ mt: { xs: 2 }, mb: { xs: 5, lg: 10, xl: 15 } }}>
+            <Typography
+                textAlign="justify"
+                lineHeight={2}
+                sx={{ textIndent: "2rem" }}
+            >
+                {description}
             </Typography>
-            <Typography variant="h6" fontWeight={700}>
-                Tech Stack:{" "}
-            </Typography>
-            <Typography variant="caption">
-                HTML5/ CSS3/ JavaScript/ Tailwind CSS/ React JS/ Redux/
-            </Typography>
-            <AnimatedButton title="Visit Live Version" width={175} path="/" />
+            {details &&
+                details.map(({ task, solution, tech_stack }, id) => (
+                    <Fragment key={id}>
+                        <Typography fontSize={15} fontWeight={700}>
+                            Task: &nbsp;
+                            <Typography variant="caption" fontSize={15}>
+                                {task}
+                            </Typography>
+                        </Typography>
+
+                        <Typography fontSize={15} fontWeight={700}>
+                            Solution: &nbsp;
+                            <Typography variant="caption" fontSize={15}>
+                                {solution}
+                            </Typography>
+                        </Typography>
+
+                        <Typography
+                            variant="caption"
+                            fontSize={15}
+                            fontWeight={700}
+                        >
+                            Tech Stack: &nbsp;
+                        </Typography>
+                        <Typography variant="caption" fontSize={15}>
+                            {tech_stack.join(" / ")}
+                        </Typography>
+                    </Fragment>
+                ))}
+
+            <AnimatedButton
+                title="Visit Live Version"
+                width={175}
+                path={path}
+            />
         </Box>
     );
 };

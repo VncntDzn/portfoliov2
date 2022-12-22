@@ -1,13 +1,13 @@
-import { Box, Divider, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 import Circle from "./components/Circle";
-import ScrollArrow from "./components/ScrollArrow";
 import SeeWorks from "./components/SeeWorks";
 import Slogan from "./components/Slogan";
 import SocialLinks from "./components/SocialLinks";
 
 const LandingPage = () => {
     const theme = useTheme();
+    const mediaQuery = useMediaQuery(theme.breakpoints.up("sm"));
     return (
         <Box
             display="flex"
@@ -18,37 +18,33 @@ const LandingPage = () => {
             zIndex={1}
             bgcolor={theme.palette.primary.main}
             sx={{
-                height: { xs: "85vh", sm: "40vh", lg: "100vh" },
-                paddingX: { xs: 5, md: 20, lg: 30 },
+                height: { sm: "40vh", lg: "100vh" },
             }}
         >
-            <Divider
-                orientation="vertical"
-                flexItem
+            <Box
+                borderLeft={
+                    mediaQuery ? `2px solid ${theme.palette.primary.light}` : ""
+                }
+                borderBottom={
+                    mediaQuery ? `2px solid ${theme.palette.primary.light}` : ""
+                }
+                height="80vh"
+                width="74vw"
+                maxHeight="80vh"
+                maxWidth="75vw"
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
                 sx={{
-                    display: { xs: "none", md: "flex" },
-                    height: { xs: "none", md: "70%", lg: "79%" },
-                    position: "absolute",
-                    left: "11%",
+                    marginY: { sm: 5, lg: 0 },
                 }}
-            />
-
-            <Slogan />
-            <SeeWorks />
-            <SocialLinks />
-            <ScrollArrow />
-            <Circle />
-            <Divider
-                flexItem
-                sx={{
-                    display: { xs: "none", md: "block" },
-                    position: "absolute",
-                    top: 10,
-                    bottom: 80,
-                    left: "11%",
-                    width: "80%",
-                }}
-            />
+            >
+                <Slogan mediaQuery={mediaQuery} />
+                <SeeWorks />
+                <Circle />
+                <SocialLinks />
+            </Box>
         </Box>
     );
 };

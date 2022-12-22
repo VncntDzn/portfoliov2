@@ -1,15 +1,15 @@
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Box, Grid } from "@mui/material";
-import Creativ from "assets/projects/creativ.jpeg";
 import {
     ButtonBack,
     ButtonNext,
     CarouselProvider,
     Slide,
-    Slider
+    Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import projects from "../assets/data";
 import CarouselActions from "./CarouselActions";
 import CarouselDescription from "./CarouselDescription";
 import CarouselImage from "./CarouselImage";
@@ -17,39 +17,26 @@ const BUTTON_STYLE = {
     display: "flex",
     alignItems: "center",
 };
-const data = [
-    {
-        image: Creativ,
-    },
-    {
-        image: Creativ,
-    },
-    {
-        image: Creativ,
-    },
-    {
-        image: Creativ,
-    },
-];
+
 const Carousel = () => {
     return (
         <CarouselProvider
-            totalSlides={data.length}
+            totalSlides={projects.length}
             naturalSlideWidth={100}
             naturalSlideHeight={125}
         >
             <Box
+                overflow="hidden"
+                paddingX={1}
+                width="80vw"
                 sx={{
                     height: { xs: "68vh", sm: "35rem", lg: "45rem" },
-                    width: "80vw",
-                    paddingX: 1,
-                    overflow: "hidden",
                 }}
             >
                 <Box component={Slider} height="100%">
-                    {data.map(({ image }, i) => (
-                        <Slide index={0} key={i}>
-                            <CarouselActions>
+                    {projects.map(({ image, title, id, description }) => (
+                        <Slide index={0} key={id}>
+                            <CarouselActions title={title}>
                                 <ButtonBack style={BUTTON_STYLE}>
                                     <ArrowBackIosNewIcon />
                                 </ButtonBack>
@@ -60,14 +47,16 @@ const Carousel = () => {
 
                             <Grid
                                 container
-                                spacing={3}
                                 sx={{
-                                    padding: 1,
                                     marginTop: { xs: 10, sm: 0 },
+                                    gap: { xs: 0, lg: 5 },
                                 }}
                             >
                                 <CarouselImage image={image} />
-                                <CarouselDescription />
+                                <CarouselDescription
+                                    description={description}
+                                    id={id}
+                                />
                             </Grid>
                         </Slide>
                     ))}

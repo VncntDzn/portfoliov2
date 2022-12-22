@@ -7,7 +7,13 @@ import LottieComponent from "./components/LottieComponent";
 const Contact = () => {
     return (
         <AnimatedLayout isPadded isPrimaryColor={false}>
-            <Box id="contact" width="100%">
+            <Box
+                id="contact"
+                width="100%"
+                sx={{
+                    padding: { sm: "2rem 5rem", md: 0 },
+                }}
+            >
                 <SectionTitle title="Connect with Vincent" />
                 <Box
                     display="flex"

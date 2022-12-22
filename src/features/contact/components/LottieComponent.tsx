@@ -5,7 +5,7 @@ const LottieComponent = () => {
     return (
         <Box
             sx={{
-                display: { xs: "none", md: "flex" },
+                display: { xs: "none", sm: "flex" },
                 flex: "40%",
             }}
         >

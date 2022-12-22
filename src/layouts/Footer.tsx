@@ -9,6 +9,8 @@ const Footer = () => {
                 backgroundColor: "#1d1d1d",
                 paddingX: { xs: 5, lg: 35, xl: 50 },
                 paddingY: { xs: 5, lg: 10 },
+                display: "flex",
+                flexDirection: "column",
             }}
         >
             <Grid
@@ -16,6 +18,10 @@ const Footer = () => {
                 direction="row"
                 justifyContent="space-evenly"
                 alignItems="center"
+                alignSelf="center"
+                sx={{
+                    maxWidth: { lg: "60%" },
+                }}
             >
                 <Grid
                     item
